@@ -16,7 +16,7 @@ export const Footer: React.FC = () => {
               <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-brand-blue">
                 <Cpu className="w-5 h-5 text-white" />
               </div>
-              <span className="text-xl font-bold tracking-tight">AI<span className="text-brand-blue">Hub</span></span>
+              <span className="text-xl font-bold tracking-tight">AI<span className="text-brand-blue">Bench</span></span>
             </Link>
             <p className="mb-6 text-sm leading-relaxed text-muted-foreground">
               全球领先的 AI 工具导航平台，致力于为用户发现最具创新性的智能解决方案。开启您的 AI 探索之旅。
@@ -91,7 +91,7 @@ export const Footer: React.FC = () => {
 
         <div className="flex flex-col items-center justify-between gap-4 pt-8 mt-12 border-t md:flex-row">
           <p className="text-xs text-muted-foreground">
-            &copy; {currentYear} AI Hub 导航平台. 保留所有权利。
+            &copy; {currentYear} AIBench 导航平台. 保留所有权利。
           </p>
           <div className="flex gap-6">
             <span className="text-xs text-muted-foreground">Designed for AI Era</span>

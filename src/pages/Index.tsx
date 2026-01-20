@@ -6,6 +6,7 @@ import { CategoryFilter } from '@/components/CategoryFilter';
 import { SearchBar } from '@/components/SearchBar';
 import { ToolCard } from '@/components/ToolCard';
 import { Footer } from '@/components/Footer';
+import { StatsSection } from '@/components/StatsSection';
 import { useToolSearch } from '@/hooks/useToolSearch';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -30,6 +31,9 @@ const Index: React.FC = () => {
       <main className="flex-grow">
         {/* Hero Section */}
         <HeroSection />
+
+        {/* Stats Section */}
+        <StatsSection />
 
         {/* Featured Tools Section - Only show when no filters are applied to keep UI clean */}
         {!hasActiveFilters && (

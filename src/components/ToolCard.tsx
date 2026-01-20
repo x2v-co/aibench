@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { ExternalLink, Star, Eye } from 'lucide-react';
 import { AITool } from '@/types/tools';
 import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card';
@@ -35,9 +36,11 @@ export const ToolCard: React.FC<ToolCardProps> = ({ tool }) => {
           </div>
           <div>
             <div className="flex items-center gap-2">
-              <h3 className="font-bold text-lg group-hover:text-brand-blue transition-colors">
-                {tool.name}
-              </h3>
+              <Link to={`/tool/${tool.id}`}>
+                <h3 className="font-bold text-lg group-hover:text-brand-blue transition-colors hover:underline">
+                  {tool.name}
+                </h3>
+              </Link>
               {tool.isFeatured && (
                 <span className="flex h-2 w-2 rounded-full bg-brand-orange animate-pulse" />
               )}

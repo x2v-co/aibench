@@ -16,7 +16,7 @@ export const Header = () => {
             <span className="text-white font-bold text-xl">A</span>
           </div>
           <span className="text-xl font-bold tracking-tight hidden sm:block">
-            AI<span className="text-brand-blue">Hub</span>
+            AI<span className="text-brand-blue">Bench</span>
           </span>
         </Link>
 
@@ -56,13 +56,14 @@ export const Header = () => {
 
         {/* Actions */}
         <div className="flex items-center gap-2 md:gap-4 flex-1 justify-end">
-          <div className="relative hidden lg:block w-full max-w-xs">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+          <Link to={ROUTE_PATHS.SEARCH} className="relative hidden lg:block w-full max-w-xs">
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground pointer-events-none" />
             <Input
               placeholder="搜索 AI 工具..."
-              className="pl-10 h-9 bg-secondary/50 border-none focus-visible:ring-brand-blue"
+              className="pl-10 h-9 bg-secondary/50 border-none focus-visible:ring-brand-blue cursor-pointer"
+              readOnly
             />
-          </div>
+          </Link>
 
           <Link to={ROUTE_PATHS.SUBMIT}>
             <Button variant="default" size="sm" className="bg-brand-blue hover:bg-blue-600 gap-2">
