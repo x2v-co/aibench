@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "title": "Benutzerhandbuch - AIHub",
+    "description": "Erfahren Sie, wie Sie AIHub effektiv nutzen - Tools suchen, nach Kategorie filtern, Favoriten speichern und eigene AI-Tools einreichen.",
+    "keywords": "Benutzerhandbuch, Tutorial, Anleitung, Hilfe"
+  },
+  "title": "Benutzerhandbuch",
+  "subtitle": "Holen Sie das Beste aus AIHub mit unserem umfassenden Leitfaden",
+  "sections": {
+    "searching": {
+      "title": "AI-Tools suchen",
+      "description": "Finden Sie mit unserer leistungsstarken Suchfunktion den perfekten AI-Tool für Ihre Bedürfnisse",
+      "steps": {
+        "useSearchBar": "Verwenden Sie die Suchleiste oben auf der Seite, um Schlüsselwörter einzugeben",
+        "useFilters": "Wenden Sie Kategoriefilter an, um Ergebnisse einzugrenzen",
+        "sortResults": "Sortieren Sie Ergebnisse nach Beliebtheit, Bewertung oder Neueste"
+      }
+    },
+    "categories": {
+      "title": "Kategorien durchsuchen",
+      "description": "Erkunden Sie AI-Tools, die nach Kategorien organisiert sind",
+      "steps": {
+        "browseCategories": "Durchsuchen Sie unsere kuratierten Kategorien wie 'Chatbots', 'Bildgenerierung' usw.",
+        "filterByCategory": "Klicken Sie auf eine Kategorie, um alle Tools darin anzuzeigen",
+        "exploreCollections": "Schauen Sie sich unsere thematischen Sammlungen an"
+      }
+    },
+    "saving": {
+      "title": "Favoriten speichern",
+      "description": "Speichern Sie Ihre Lieblings-Tools für den schnellen späteren Zugriff",
+      "steps": {
+        "clickBookmark": "Klicken Sie auf das Lesezeichen-Symbol auf einer Tool-Karte",
+        "accessSaved": "Greifen Sie auf gespeicherte Tools im 'Lesezeichen'-Bereich zu",
+        "manageBookmarks": "Organisieren und entfernen Sie Lesezeichen jederzeit"
+      }
+    },
+    "rating": {
+      "title": "Tools bewerten",
+      "description": "Teilen Sie Ihre Erfahrung und helfen Sie anderen, großartige Tools zu entdecken",
+      "steps": {
+        "selectRating": "Klicken Sie auf die Sternebewertung auf einer Tool-Seite",
+        "shareExperience": "Hinterlassen Sie eine detaillierte Bewertung Ihrer Erfahrung",
+        "helpOthers": "Ihre Bewertungen helfen anderen Benutzern"
+      }
+    },
+    "submission": {
+      "title": "Tools einreichen",
+      "description": "Tragen Sie zu unserem Verzeichnis bei, indem Sie neue AI-Tools einreichen",
+      "steps": {
+        "clickSubmit": "Navigieren Sie zur 'Tool einreichen'-Seite",
+        "fillDetails": "Füllen Sie die Tool-Details aus",
+        "awaitReview": "Unser Team prüft Ihre Einreichung innerhalb von 24-48 Stunden"
+      }
+    },
+    "sharing": {
+      "title": "Tools teilen",
+      "description": "Teilen Sie interessante AI-Tools mit Ihrem Netzwerk",
+      "steps": {
+        "copyLink": "Kopieren Sie den direkten Link mit der Teilen-Schaltfläche",
+        "socialMedia": "Teilen Sie direkt auf sozialen Plattformen",
+        "embedTool": "Betten Sie Tool-Karten auf Ihrer Website ein"
+      }
+    }
+  },
+  "tips": {
+    "title": "Pro-Tipps",
+    "items": {
+      "0": {
+        "title": "Verwenden Sie spezifische Schlüsselwörter",
+        "description": "Suchen Sie nach spezifischen Funktionen wie 'Bildbearbeitung'"
+      },
+      "1": {
+        "title": "Tägliche Updates prüfen",
+        "description": "Wir fügen regelmäßig neue Tools hinzu"
+      },
+      "2": {
+        "title": "Ähnliche Tools vergleichen",
+        "description": "Verwenden Sie Filter, um Tools nebeneinander zu vergleichen"
+      },
+      "3": {
+        "title": "Newsletter abonnieren",
+        "description": "Abonnieren Sie wöchentliche Updates"
+      }
+    }
+  },
+  "faq": {
+    "title": "Häufig gestellte Fragen",
+    "items": {
+      "0": {
+        "question": "Ist AIHub kostenlos?",
+        "answer": "Ja, AIHub ist völlig kostenlos."
+      },
+      "1": {
+        "question": "Wie werden Tools überprüft?",
+        "answer": "Unser Team prüft jede Einreichung manuell."
+      },
+      "2": {
+        "question": "Kann ich meinen eigenen AI-Tool einreichen?",
+        "answer": "Absolut! Wir begrüßen Einreichungen von Entwicklern."
+      }
+    }
+  }
+}

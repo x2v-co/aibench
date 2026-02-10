@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ROUTE_PATHS } from '@/constants/routes';
-import { SiGithub, SiX, SiFacebook } from 'react-icons/si';
+import { SiGithub, SiX } from 'react-icons/si';
 import { Cpu, Loader2 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { toast } from '@/components/ui/sonner';
@@ -66,14 +66,14 @@ export const Footer: React.FC = () => {
               {t('tagline')}
             </p>
             <div className="flex items-center gap-4">
-              <a href="#" className="transition-colors text-muted-foreground hover:text-foreground" target="_blank" rel="noopener noreferrer">
+              <a href="https://x.com/x2v_offical" className="transition-colors text-muted-foreground hover:text-foreground" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
                 <SiX className="w-5 h-5" />
               </a>
-              <a href="#" className="transition-colors text-muted-foreground hover:text-foreground" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/x2v-co/aibench" className="transition-colors text-muted-foreground hover:text-foreground" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                 <SiGithub className="w-5 h-5" />
               </a>
-              <a href="#" className="transition-colors text-muted-foreground hover:text-foreground" target="_blank" rel="noopener noreferrer">
-                <SiFacebook className="w-5 h-5" />
+              <a href="https://x2v.co/" className="transition-colors text-muted-foreground hover:text-foreground" target="_blank" rel="noopener noreferrer" aria-label="Website">
+                <Cpu className="w-5 h-5" />
               </a>
             </div>
           </div>
@@ -103,13 +103,13 @@ export const Footer: React.FC = () => {
                 <Link to={ROUTE_PATHS.ABOUT} className="text-sm transition-colors text-muted-foreground hover:text-brand-blue">{t('sections.help.aboutUs')}</Link>
               </li>
               <li>
-                <a href="#" className="text-sm transition-colors text-muted-foreground hover:text-brand-blue">{t('sections.help.userGuide')}</a>
+                <Link to={ROUTE_PATHS.USER_GUIDE} className="text-sm transition-colors text-muted-foreground hover:text-brand-blue">{t('sections.help.userGuide')}</Link>
               </li>
               <li>
-                <a href="#" className="text-sm transition-colors text-muted-foreground hover:text-brand-blue">{t('sections.help.privacyPolicy')}</a>
+                <Link to={ROUTE_PATHS.PRIVACY_POLICY} className="text-sm transition-colors text-muted-foreground hover:text-brand-blue">{t('sections.help.privacyPolicy')}</Link>
               </li>
               <li>
-                <a href="#" className="text-sm transition-colors text-muted-foreground hover:text-brand-blue">{t('sections.help.termsOfService')}</a>
+                <Link to={ROUTE_PATHS.TERMS_OF_SERVICE} className="text-sm transition-colors text-muted-foreground hover:text-brand-blue">{t('sections.help.termsOfService')}</Link>
               </li>
             </ul>
           </div>

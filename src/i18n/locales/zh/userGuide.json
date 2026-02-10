@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "title": "用户指南 - AIHub",
+    "description": "学习如何有效使用AIHub - 搜索工具、按类别筛选、收藏喜欢的工具以及提交您自己的AI工具。",
+    "keywords": "用户指南, 教程, 使用方法, 帮助"
+  },
+  "title": "用户指南",
+  "subtitle": "通过我们的全面指南充分利用AIHub",
+  "sections": {
+    "searching": {
+      "title": "搜索AI工具",
+      "description": "使用我们强大的搜索功能找到适合您需求的完美AI工具",
+      "steps": {
+        "useSearchBar": "在页面顶部的搜索栏中输入与您要查找的工具相关的关键词",
+        "useFilters": "应用类别过滤器将结果缩小到特定类型的AI工具",
+        "sortResults": "按受欢迎程度、评分或最新添加排序，找到热门工具"
+      }
+    },
+    "categories": {
+      "title": "浏览类别",
+      "description": "浏览按类别组织的AI工具，轻松发现新工具",
+      "steps": {
+        "browseCategories": "浏览我们精心策划的类别，如"聊天机器人"、"图像生成"、"代码助手"等",
+        "filterByCategory": "点击任何类别以查看该类别中的所有工具",
+        "exploreCollections": "查看我们的专题集合，获取精心挑选的工具推荐"
+      }
+    },
+    "saving": {
+      "title": "收藏喜欢的工具",
+      "description": "收藏您喜欢的工具以便稍后快速访问",
+      "steps": {
+        "clickBookmark": "点击任何工具卡片上的书签图标将其添加到收藏夹",
+        "accessSaved": "从您个人资料中的"书签"部分访问已保存的工具",
+        "manageBookmarks": "随时整理和删除收藏集中的书签"
+      }
+    },
+    "rating": {
+      "title": "评价工具",
+      "description": "分享您的经验，帮助他人发现优质工具",
+      "steps": {
+        "selectRating": "点击任何工具页面上的星级评分，为其评分1-5星",
+        "shareExperience": "留下详细的评论，描述您使用该工具的经验",
+        "helpOthers": "您的评分帮助其他用户为他们的需求找到最好的AI工具"
+      }
+    },
+    "submission": {
+      "title": "提交工具",
+      "description": "通过提交新的AI工具为我们的目录做出贡献",
+      "steps": {
+        "clickSubmit": "从主菜单导航到"提交工具"页面",
+        "fillDetails": "填写工具详细信息，包括名称、描述、类别和网站URL",
+        "awaitReview": "我们的团队将在24-48小时内审核您的提交并添加已批准的工具"
+      }
+    },
+    "sharing": {
+      "title": "分享工具",
+      "description": "与您的人脉分享有趣的AI工具",
+      "steps": {
+        "copyLink": "使用分享按钮复制任何工具页面的直接链接",
+        "socialMedia": "直接分享到Twitter、Facebook或其他社交平台",
+        "embedTool": "使用我们的嵌入代码生成器在您的网站上嵌入工具卡片"
+      }
+    }
+  },
+  "tips": {
+    "title": "专业提示",
+    "items": {
+      "0": {
+        "title": "使用特定关键词",
+        "description": "搜索特定功能，如"图像编辑"或"代码生成"，以找到更有针对性的结果"
+      },
+      "1": {
+        "title": "查看每日更新",
+        "description": "我们会定期添加新工具。经常访问以发现最新的AI创新"
+      },
+      "2": {
+        "title": "比较相似工具",
+        "description": "使用过滤器并排查看工具并比较功能、定价和评分"
+      },
+      "3": {
+        "title": "订阅我们的新闻通讯",
+        "description": "订阅以获取关于新工具、热门AI新闻和独家内容的每周更新"
+      }
+    }
+  },
+  "faq": {
+    "title": "常见问题",
+    "items": {
+      "0": {
+        "question": "AIHub是免费使用的吗？",
+        "answer": "是的，AIHub完全免费。您可以浏览、搜索和访问所有AI工具，无需任何费用。"
+      },
+      "1": {
+        "question": "工具是如何审核和验证的？",
+        "answer": "我们的团队会手动审核每个提交，以确保工具质量、合法性和相关性，然后才会将其添加到我们的目录中。"
+      },
+      "2": {
+        "question": "我可以提交自己的AI工具吗？",
+        "answer": "当然可以！我们欢迎开发人员和AI爱好者的提交。使用我们的提交表单，我们将及时审核。"
+      }
+    }
+  }
+}

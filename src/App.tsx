@@ -11,6 +11,9 @@ import Submit from "./pages/Submit";
 import Search from "./pages/Search";
 import Category from "./pages/Category";
 import NotFound from "./pages/NotFound";
+import UserGuide from "./pages/UserGuide";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsOfService from "./pages/TermsOfService";
 
 const queryClient = new QueryClient();
 
@@ -28,6 +31,9 @@ const App = () => (
           <Route path="/about" element={<About />} />
           <Route path="/search" element={<Search />} />
           <Route path="/submit" element={<Submit />} />
+          <Route path="/user-guide" element={<UserGuide />} />
+          <Route path="/privacy" element={<PrivacyPolicy />} />
+          <Route path="/terms" element={<TermsOfService />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </HashRouter>

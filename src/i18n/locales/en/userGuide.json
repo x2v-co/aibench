@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "title": "User Guide - AIHub",
+    "description": "Learn how to use AIHub effectively - search tools, filter by category, save favorites, and submit your own AI tools.",
+    "keywords": "user guide, tutorial, how to use, help"
+  },
+  "title": "User Guide",
+  "subtitle": "Get the most out of AIHub with our comprehensive guide",
+  "sections": {
+    "searching": {
+      "title": "Searching for AI Tools",
+      "description": "Find the perfect AI tool for your needs with our powerful search functionality",
+      "steps": {
+        "useSearchBar": "Use the search bar at the top of the page to enter keywords related to the tool you're looking for",
+        "useFilters": "Apply category filters to narrow down results to specific types of AI tools",
+        "sortResults": "Sort results by popularity, rating, or newest additions to find trending tools"
+      }
+    },
+    "categories": {
+      "title": "Browsing Categories",
+      "description": "Explore AI tools organized by category for easy discovery",
+      "steps": {
+        "browseCategories": "Browse through our curated categories like 'Chatbots', 'Image Generation', 'Code Assistants', and more",
+        "filterByCategory": "Click on any category to view all tools within that category",
+        "exploreCollections": "Check out our themed collections for hand-picked tool recommendations"
+      }
+    },
+    "saving": {
+      "title": "Saving Favorites",
+      "description": "Save your favorite tools for quick access later",
+      "steps": {
+        "clickBookmark": "Click the bookmark icon on any tool card to add it to your favorites",
+        "accessSaved": "Access your saved tools from the 'Bookmarks' section in your profile",
+        "manageBookmarks": "Organize and remove bookmarks from your collection anytime"
+      }
+    },
+    "rating": {
+      "title": "Rating Tools",
+      "description": "Share your experience and help others discover great tools",
+      "steps": {
+        "selectRating": "Click the star rating on any tool page to rate it from 1-5 stars",
+        "shareExperience": "Leave a detailed review describing your experience with the tool",
+        "helpOthers": "Your ratings help other users find the best AI tools for their needs"
+      }
+    },
+    "submission": {
+      "title": "Submitting Tools",
+      "description": "Contribute to our directory by submitting new AI tools",
+      "steps": {
+        "clickSubmit": "Navigate to the 'Submit Tool' page from the main menu",
+        "fillDetails": "Fill in the tool details including name, description, category, and website URL",
+        "awaitReview": "Our team will review your submission and add approved tools within 24-48 hours"
+      }
+    },
+    "sharing": {
+      "title": "Sharing Tools",
+      "description": "Share interesting AI tools with your network",
+      "steps": {
+        "copyLink": "Copy the direct link to any tool page using the share button",
+        "socialMedia": "Share directly to Twitter, Facebook, or other social platforms",
+        "embedTool": "Embed tool cards on your website using our embed code generator"
+      }
+    }
+  },
+  "tips": {
+    "title": "Pro Tips",
+    "items": {
+      "0": {
+        "title": "Use Specific Keywords",
+        "description": "Search for specific features like 'image editing' or 'code generation' to find more targeted results"
+      },
+      "1": {
+        "title": "Check Daily Updates",
+        "description": "We add new tools regularly. Visit often to discover the latest AI innovations"
+      },
+      "2": {
+        "title": "Compare Similar Tools",
+        "description": "Use filters to view tools side-by-side and compare features, pricing, and ratings"
+      },
+      "3": {
+        "title": "Join Our Newsletter",
+        "description": "Subscribe to get weekly updates on new tools, trending AI news, and exclusive content"
+      }
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "items": {
+      "0": {
+        "question": "Is AIHub free to use?",
+        "answer": "Yes, AIHub is completely free. You can browse, search, and access all AI tools without any charge."
+      },
+      "1": {
+        "question": "How are tools reviewed and verified?",
+        "answer": "Our team manually reviews each submission to ensure tool quality, legitimacy, and relevance before adding it to our directory."
+      },
+      "2": {
+        "question": "Can I submit my own AI tool?",
+        "answer": "Absolutely! We welcome submissions from developers and AI enthusiasts. Use our submission form and we'll review it promptly."
+      }
+    }
+  }
+}
