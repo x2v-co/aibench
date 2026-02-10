@@ -1,0 +1,7 @@
+name = "aibench"
+compatibility_date = "2024-01-01"
+
+[vars]
+# Development environment variables (will be overridden in production)
+EMAILOCTOPUS_API_KEY = ""
+EMAILOCTOPUS_LIST_ID = ""
