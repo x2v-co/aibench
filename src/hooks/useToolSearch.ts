@@ -1,4 +1,4 @@
-import { useState, useMemo, useCallback, useEffect, useRef } from 'react';
+import { useState, useMemo, useCallback, useEffect } from 'react';
 import { useSearchParams, useLocation, useNavigate } from 'react-router-dom';
 import { AITool } from '@/types/tools';
 import { aiTools as defaultAiTools } from '@/data/tools';
@@ -17,33 +17,42 @@ export const useToolSearch = ({ tools }: UseToolSearchOptions = {}) => {
   const [selectedCategoryId, setSelectedCategoryId] = useState<string | null>(null);
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [sortBy, setSortBy] = useState<SortOption>('trending');
-  const initializedRef = useRef(false);
 
   // Use provided tools or fallback to default
   const aiTools = tools || defaultAiTools;
 
-  // Initialize search query from URL parameter (only once on mount)
-  useEffect(() => {
-    if (!initializedRef.current) {
-      try {
-        // Use URLSearchParams to parse window.location.search
-        const urlSearchParams = new URLSearchParams(window.location.hash.split('?')[1] || window.location.search.substring(1));
-
-        const searchParam = urlSearchParams.get('search') || urlSearchParams.get('q');
-        if (searchParam) {
-          setSearchQuery(decodeURIComponent(searchParam));
-        }
-        // Initialize category from URL parameter
-        const categoryParam = urlSearchParams.get('category');
-        if (categoryParam) {
-          setSelectedCategoryId(categoryParam);
-        }
-      } catch (error) {
-        console.error('Error initializing search params:', error);
-      }
-      initializedRef.current = true;
+  // Parse URL search parameters from hash router format
+  const getUrlSearchParams = useCallback(() => {
+    try {
+      const hash = window.location.hash;
+      const queryString = hash.split('?')[1];
+      return new URLSearchParams(queryString || '');
+    } catch {
+      return new URLSearchParams();
     }
-  }, []); // Empty deps - run only once
+  }, []);
+
+  // Initialize and sync search query from URL parameter
+  useEffect(() => {
+    const urlSearchParams = getUrlSearchParams();
+    const searchParam = urlSearchParams.get('search') || urlSearchParams.get('q');
+    if (searchParam) {
+      try {
+        setSearchQuery(decodeURIComponent(searchParam));
+      } catch {
+        console.error('Error decoding search parameter');
+        setSearchQuery(searchParam);
+      }
+    } else {
+      setSearchQuery('');
+    }
+
+    // Initialize category from URL parameter
+    const categoryParam = urlSearchParams.get('category');
+    if (categoryParam) {
+      setSelectedCategoryId(categoryParam);
+    }
+  }, [location.key, getUrlSearchParams]); // Re-run when location changes
 
   const filteredTools = useMemo(() => {
     let result = [...tools];
@@ -99,7 +108,6 @@ export const useToolSearch = ({ tools }: UseToolSearchOptions = {}) => {
     setSelectedCategoryId(null);
     setSelectedTags([]);
     setSortBy('trending');
-    initializedRef.current = false; // Reset initialization flag
     navigate('/');
   }, [navigate]);
 
