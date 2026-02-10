@@ -7,9 +7,12 @@ import { SearchBar } from '@/components/SearchBar';
 import { ToolCard } from '@/components/ToolCard';
 import { Footer } from '@/components/Footer';
 import { useToolSearch } from '@/hooks/useToolSearch';
+import { useSEO } from '@/hooks/useSEO';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const Index: React.FC = () => {
+  useSEO();
+
   const {
     searchQuery,
     setSearchQuery,

@@ -16,7 +16,7 @@ export const Header = () => {
             <span className="text-white font-bold text-xl">A</span>
           </div>
           <span className="text-xl font-bold tracking-tight hidden sm:block">
-            AI<span className="text-brand-blue">Hub</span>
+            AI<span className="text-brand-blue">Bench</span>
           </span>
         </Link>
 

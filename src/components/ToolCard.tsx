@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { ExternalLink, Star, Eye } from 'lucide-react';
 import { AITool } from '@/types/tools';
 import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card';
@@ -11,6 +12,12 @@ interface ToolCardProps {
 }
 
 export const ToolCard: React.FC<ToolCardProps> = ({ tool }) => {
+  const navigate = useNavigate();
+
+  const handleCardClick = () => {
+    navigate(`/tool/${tool.id}`);
+  };
+
   return (
     <motion.div
       whileHover={{ y: -4 }}
@@ -19,7 +26,10 @@ export const ToolCard: React.FC<ToolCardProps> = ({ tool }) => {
       viewport={{ once: true }}
       transition={{ duration: 0.3 }}
     >
-      <Card className="tech-card group h-full flex flex-col">
+      <Card
+        className="tech-card group h-full flex flex-col cursor-pointer"
+        onClick={handleCardClick}
+      >
         <CardHeader className="p-4 space-y-4">
           <div className="flex items-start justify-between">
             <div className="w-12 h-12 rounded-xl overflow-hidden border bg-muted">
@@ -27,6 +37,9 @@ export const ToolCard: React.FC<ToolCardProps> = ({ tool }) => {
                 src={tool.iconUrl}
                 alt={tool.name}
                 className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all"
+                onError={(e) => {
+                  (e.target as HTMLImageElement).src = `https://ui-avatars.com/api/?name=${encodeURIComponent(tool.name)}&background=random&size=64`;
+                }}
               />
             </div>
             <Badge variant="secondary" className="bg-secondary/50 font-medium">
@@ -69,12 +82,15 @@ export const ToolCard: React.FC<ToolCardProps> = ({ tool }) => {
               <span>{tool.visitCount > 1000 ? `${(tool.visitCount / 1000).toFixed(1)}k` : tool.visitCount}</span>
             </div>
           </div>
-          
+
           <Button
             variant="ghost"
             size="sm"
             className="h-8 px-2 text-brand-blue hover:text-brand-blue hover:bg-brand-blue/10"
-            onClick={() => window.open(tool.websiteUrl, '_blank', 'noopener,noreferrer')}
+            onClick={(e) => {
+              e.stopPropagation();
+              window.open(tool.websiteUrl, '_blank', 'noopener,noreferrer');
+            }}
           >
             <ExternalLink className="h-4 w-4 mr-1" />
             访问

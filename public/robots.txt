@@ -1,14 +1,9 @@
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: Twitterbot
-Allow: /
-
-User-agent: facebookexternalhit
-Allow: /
-
+# robots.txt for AIBench
 User-agent: *
 Allow: /
+
+# Sitemap
+Sitemap: https://aibench.top/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1
