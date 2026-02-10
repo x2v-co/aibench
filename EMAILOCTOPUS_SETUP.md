@@ -2,15 +2,15 @@
 
 ## Overview
 
-AIBench uses EmailOctopus for newsletter subscriptions. This guide will help you set up the newsletter functionality.
+AIBench uses EmailOctopus embedded form for newsletter subscriptions. This approach avoids CORS issues and works directly from the browser without requiring a backend.
 
-## Why EmailOctopus?
+## Why EmailOctopus Embedded Form?
 
-- ✅ **Free tier**: 2,500 subscribers, 10,000 emails/month
-- ✅ **No backend needed**: Direct API calls from frontend
-- ✅ **Simple integration**: REST API
+- ✅ **No CORS issues**: Uses traditional HTML form POST
+- ✅ **No backend needed**: Direct submission to EmailOctopus
+- ✅ **Simple integration**: Standard HTML form
 - ✅ **Full-featured**: Email templates, analytics, automation
-- ✅ **Affordable**: $8/month for 5,000 subscribers
+- ✅ **Free tier**: 2,500 subscribers, 10,000 emails/month
 
 ## Setup Steps
 
@@ -20,14 +20,7 @@ AIBench uses EmailOctopus for newsletter subscriptions. This guide will help you
 2. Sign up for a free account
 3. Verify your email address
 
-### Step 2: Get API Key
-
-1. Log in to EmailOctopus dashboard
-2. Click your name (top right) → **Settings**
-3. Navigate to **API** tab
-4. Copy your API Key
-
-### Step 3: Create Email List
+### Step 2: Create Email List
 
 1. In EmailOctopus dashboard, go to **Lists**
 2. Click **Create a new list**
@@ -37,72 +30,98 @@ AIBench uses EmailOctopus for newsletter subscriptions. This guide will help you
    - **From name**: AIBench
    - **From email**: service@x2v.co (or your verified email)
 4. Click **Create list**
-5. Copy the **List ID** from the URL or list settings
+5. Copy the **List ID** from the URL
    - URL format: `https://emailoctopus.com/lists/{LIST_ID}`
 
-### Step 4: Configure Environment Variables
+### Step 3: Get Embedded Form URL
 
-1. Copy `.env.example` to `.env.local`:
-   ```bash
-   cp .env.example .env.local
-   ```
+Your embedded form URL will be:
+```
+https://emailoctopus.com/lists/{LIST_ID}/members/embedded/1.3s/add
+```
 
-2. Edit `.env.local` and add your credentials:
-   ```env
-   VITE_EMAILOCTOPUS_API_KEY=your_api_key_here
-   VITE_EMAILOCTOPUS_LIST_ID=your_list_id_here
-   ```
+Replace `{LIST_ID}` with your actual List ID.
 
-3. **Never commit `.env.local`** - it's already in `.gitignore`
+**Example:**
+```
+https://emailoctopus.com/lists/de852cd8-0666-11f1-85cc-572c43f6374b/members/embedded/1.3s/add
+```
 
-### Step 5: Test the Integration
+### Step 4: Update Footer Component (Already Configured)
 
-1. Start the development server:
+The form is already configured in `src/components/Footer.tsx`:
+
+```tsx
+<form
+  method="post"
+  action="https://emailoctopus.com/lists/YOUR_LIST_ID/members/embedded/1.3s/add"
+  // ...
+>
+  <input type="email" name="email_address" required />
+  <input type="hidden" name="successRedirectUrl" value="https://aibench.top/#/?subscribed=true" />
+  <button type="submit">Subscribe</button>
+</form>
+```
+
+**To update for your list:**
+1. Open `src/components/Footer.tsx`
+2. Find the form `action` URL
+3. Replace the List ID with yours
+
+### Step 5: Verify Email Address
+
+Before sending emails, verify your sender email:
+
+1. Go to your list → **Settings** → **Sending details**
+2. Confirm **From email** (`service@x2v.co`)
+3. EmailOctopus will send verification email
+4. Click the verification link
+
+### Step 6: Test
+
+1. Start development server:
    ```bash
    pnpm dev
    ```
 
-2. Scroll to the footer and try subscribing with your email
-3. Check EmailOctopus dashboard to see the new subscriber
-4. Check your email for the confirmation message
+2. Scroll to footer and test subscription
+3. After submitting, you'll be redirected back with success message
+4. Check EmailOctopus dashboard for new subscriber
 
 ## How It Works
 
-### Frontend Flow
+### Submission Flow
 
-1. User enters email in footer form
-2. Form validates email format
-3. Makes POST request to EmailOctopus API:
-   ```javascript
-   POST https://emailoctopus.com/api/1.6/lists/{LIST_ID}/contacts
-   Body: {
-     api_key: "YOUR_API_KEY",
-     email_address: "user@example.com",
-     status: "SUBSCRIBED"
-   }
-   ```
-4. Shows success/error toast message
-5. For successful subscriptions, EmailOctopus sends confirmation email
+1. **User enters email** → Form validates email format (HTML5)
+2. **Clicks submit** → Traditional POST to EmailOctopus
+3. **EmailOctopus processes** → Adds subscriber to list
+4. **Redirects back** → Returns to your site with `?subscribed=true`
+5. **Success message** → Toast notification displayed
+6. **Confirmation email** → EmailOctopus sends to subscriber
 
-### Error Handling
+### No CORS Issues
 
-The implementation handles:
-- ✅ Invalid email format
-- ✅ Duplicate subscriptions (already subscribed)
-- ✅ Network errors
-- ✅ API errors
-- ✅ Multi-language error messages
+Traditional HTML form submission doesn't trigger CORS preflight:
+- ✅ No `fetch()` or `XMLHttpRequest`
+- ✅ No custom headers
+- ✅ Standard `POST` form submission
+- ✅ Works from any domain
 
-### Security Considerations
+### Success Detection
 
-**Important**: The API Key and List ID are exposed in the frontend bundle. This is acceptable for EmailOctopus because:
+When EmailOctopus redirects back, the URL includes `?subscribed=true`:
 
-1. EmailOctopus API Keys are designed for public use
-2. The key can only add subscribers to your lists
-3. It cannot delete subscribers or access sensitive data
-4. Rate limiting is built-in
-
-However, **DO NOT use this pattern** with services that have sensitive API keys (like Resend, SendGrid, etc.)
+```typescript
+// src/pages/Index.tsx
+useEffect(() => {
+  if (searchParams.get('subscribed') === 'true') {
+    toast.success('订阅成功！');
+    // Clean up URL
+    searchParams.delete('subscribed');
+    setSearchParams(searchParams, { replace: true });
+  }
+}, [searchParams]);
+```
 
 ## Sending Newsletters
 
@@ -111,7 +130,7 @@ Once you have subscribers:
 1. Go to EmailOctopus dashboard
 2. Click **Campaigns** → **Create campaign**
 3. Choose your list (AIBench Newsletter)
-4. Design your email using their editor
+4. Design your email
 5. Send or schedule
 
 ## Features Available
@@ -130,34 +149,9 @@ EmailOctopus automatically handles:
 - ✅ Unsubscribe links in every email
 - ✅ GDPR compliance
 - ✅ CAN-SPAM compliance
-- ✅ Confirmation emails (double opt-in)
-
-## Monitoring
-
-### Check Subscription Stats
-
-```bash
-# Get list stats
-curl "https://emailoctopus.com/api/1.6/lists/{LIST_ID}?api_key={API_KEY}"
-```
-
-### Common Issues
-
-**Issue**: "Invalid API key"
-- Check that your API key is correct
-- Make sure there are no extra spaces
-
-**Issue**: "List not found"
-- Verify the List ID is correct
-- Check that the list hasn't been deleted
-
-**Issue**: "Already subscribed" message
-- This is normal - EmailOctopus prevents duplicate subscriptions
-- User will be informed they're already subscribed
+- ✅ Double opt-in confirmation emails
 
 ## Cost Estimates
-
-Based on subscriber count:
 
 | Subscribers | Monthly Cost | Yearly Cost |
 |------------|--------------|-------------|
@@ -166,31 +160,58 @@ Based on subscriber count:
 | 10,000     | $16/month    | $192/year   |
 | 25,000     | $38/month    | $456/year   |
 
-## Alternative Services
+## Troubleshooting
 
-If you need different features:
+### Issue: Form submission not working
 
-- **Mailchimp**: More features, higher cost (500 free subscribers)
-- **ConvertKit**: Creator-focused (1,000 free subscribers)
-- **Buttondown**: Minimalist, $9/month for 1,000 subscribers
+**Solution:**
+- Check that List ID in form action URL is correct
+- Verify the form has `method="post"` attribute
+- Check browser console for errors
+
+### Issue: Not receiving confirmation emails
+
+**Solution:**
+- Verify sender email in EmailOctopus settings
+- Check spam folder
+- Ensure EmailOctopus account is not suspended
+
+### Issue: Subscribers not appearing in dashboard
+
+**Solution:**
+- Wait a few seconds and refresh the page
+- Check that form is submitting to correct List ID
+- Verify EmailOctopus account status
+
+## Security Notes
+
+- ✅ No API keys exposed in frontend
+- ✅ EmailOctopus handles spam prevention
+- ✅ Rate limiting built-in
+- ✅ No sensitive data transmitted
+
+## Alternative: API Integration (Not Recommended)
+
+If you need API integration (not recommended due to CORS):
+
+1. Create a backend proxy (Vercel/Netlify Functions)
+2. Proxy requests from frontend to EmailOctopus API
+3. Keep API key secret on server
+
+**Why embedded form is better:**
+- Simpler implementation
+- No backend required
+- No CORS issues
+- Built-in spam protection
+
+## Files Modified
+
+- `src/components/Footer.tsx` - Embedded form implementation
+- `src/pages/Index.tsx` - Success message detection
+- `src/i18n/locales/*/footer.json` - Translations (8 languages)
 
 ## Support
 
 - EmailOctopus Docs: https://emailoctopus.com/api-documentation
+- Embedded Forms Guide: https://emailoctopus.com/blog/embedded-forms
 - AIBench Support: service@x2v.co
-
-## Files Modified
-
-This implementation modified:
-- `src/components/Footer.tsx` - Added subscription form logic
-- `src/i18n/locales/*/footer.json` - Added translation keys (8 languages)
-- `.env.example` - Environment variable template
-- `EMAILOCTOPUS_SETUP.md` - This guide
-
-## Next Steps
-
-1. ✅ Set up EmailOctopus account
-2. ✅ Get API key and create list
-3. ✅ Configure `.env.local`
-4. ✅ Test subscription
-5. 📧 Send your first newsletter!
