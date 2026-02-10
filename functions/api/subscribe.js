@@ -20,8 +20,9 @@ export async function onRequestPost(context) {
     }
 
     // Get EmailOctopus credentials from environment variables
-    const API_KEY = env.EMAILOCTOPUS_API_KEY;
-    const LIST_ID = env.EMAILOCTOPUS_LIST_ID;
+    // Support both VITE_ prefixed and non-prefixed variable names
+    const API_KEY = env.EMAILOCTOPUS_API_KEY || env.VITE_EMAILOCTOPUS_API_KEY;
+    const LIST_ID = env.EMAILOCTOPUS_LIST_ID || env.VITE_EMAILOCTOPUS_LIST_ID;
 
     if (!API_KEY || !LIST_ID) {
       console.error('Missing EmailOctopus configuration');
