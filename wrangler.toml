@@ -1,13 +1,8 @@
 name = "aibench"
 compatibility_date = "2024-01-01"
 
-# Cloudflare Pages Functions will read environment variables from:
-# Dashboard → Pages → Project → Settings → Environment Variables
-#
-# Required variables:
-# - EMAILOCTOPUS_API_KEY
-# - EMAILOCTOPUS_LIST_ID
-
+# Environment variables for Cloudflare Pages Functions
+# Set these in: Dashboard → Pages → Project → Settings → Environment Variables
 [vars]
-# Non-sensitive configuration can go here
-# Sensitive values should be set in Cloudflare Dashboard
+# These will be available in context.env
+# Note: Use Dashboard for sensitive values in production

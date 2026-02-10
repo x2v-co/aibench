@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Header } from '@/components/Header';
 import { HeroSection } from '@/components/HeroSection';
 import { FeaturedTools } from '@/components/FeaturedTools';
@@ -11,11 +11,15 @@ import { useTranslatedTools } from '@/hooks/useTranslatedTools';
 import { useSEO } from '@/hooks/useSEO';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
+import { toast } from '@/components/ui/sonner';
+import { Loader2 } from 'lucide-react';
 
 const Index: React.FC = () => {
   useSEO();
   const { t } = useTranslation('index');
   const { aiTools } = useTranslatedTools();
+  const [newsletterEmail, setNewsletterEmail] = useState('');
+  const [isNewsletterSubmitting, setIsNewsletterSubmitting] = useState(false);
 
   const {
     searchQuery,
@@ -29,6 +33,45 @@ const Index: React.FC = () => {
   } = useToolSearch({ tools: aiTools });
 
   const hasActiveFilters = searchQuery.length > 0 || selectedCategoryId !== null;
+
+  const handleNewsletterSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    if (!newsletterEmail || !newsletterEmail.includes('@')) {
+      toast.error('Please enter a valid email address');
+      return;
+    }
+
+    setIsNewsletterSubmitting(true);
+
+    try {
+      const response = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email: newsletterEmail }),
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        if (data.alreadySubscribed) {
+          toast.info('You are already subscribed!');
+        } else {
+          toast.success('Successfully subscribed! Check your email for confirmation.');
+        }
+        setNewsletterEmail('');
+      } else {
+        throw new Error(data.error || 'Subscription failed');
+      }
+    } catch (error) {
+      console.error('Newsletter subscription error:', error);
+      toast.error('Failed to subscribe. Please try again later.');
+    } finally {
+      setIsNewsletterSubmitting(false);
+    }
+  };
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
@@ -133,16 +176,34 @@ const Index: React.FC = () => {
             <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
               {t('newsletter.description')}
             </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-md mx-auto">
+            <form
+              onSubmit={handleNewsletterSubmit}
+              className="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-md mx-auto"
+            >
               <input
                 type="email"
+                value={newsletterEmail}
+                onChange={(e) => setNewsletterEmail(e.target.value)}
                 placeholder={t('newsletter.placeholder')}
-                className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-brand-blue"
+                className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-brand-blue disabled:opacity-50"
+                disabled={isNewsletterSubmitting}
+                required
               />
-              <button className="w-full sm:w-auto px-8 py-3 bg-brand-blue text-white font-semibold rounded-lg hover:bg-blue-600 transition-colors whitespace-nowrap">
-                {t('newsletter.button')}
+              <button
+                type="submit"
+                disabled={isNewsletterSubmitting}
+                className="w-full sm:w-auto px-8 py-3 bg-brand-blue text-white font-semibold rounded-lg hover:bg-blue-600 transition-colors whitespace-nowrap disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+              >
+                {isNewsletterSubmitting ? (
+                  <>
+                    <Loader2 className="w-4 h-4 animate-spin" />
+                    <span>Subscribing...</span>
+                  </>
+                ) : (
+                  t('newsletter.button')
+                )}
               </button>
-            </div>
+            </form>
           </div>
         </section>
       </main>
