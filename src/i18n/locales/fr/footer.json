@@ -19,7 +19,14 @@
       "title": "Newsletter",
       "description": "Recevez les dernières notifications de sortie d'outils IA et mises à jour de l'industrie.",
       "placeholder": "Votre adresse e-mail",
-      "button": "S'abonner"
+      "button": "S'abonner",
+      "subscribing": "Abonnement...",
+      "success": "Abonnement réussi ! Vérifiez votre e-mail pour confirmation.",
+      "errors": {
+        "invalidEmail": "Veuillez entrer une adresse e-mail valide",
+        "alreadySubscribed": "Vous êtes déjà abonné !",
+        "failed": "Échec de l'abonnement. Veuillez réessayer plus tard."
+      }
     }
   },
   "copyright": "© {{year}} Plateforme de navigation AIBench. Tous droits réservés.",

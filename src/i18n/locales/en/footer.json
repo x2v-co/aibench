@@ -19,7 +19,14 @@
       "title": "Newsletter",
       "description": "Get the latest AI tool release notifications and industry updates.",
       "placeholder": "Your email address",
-      "button": "Subscribe"
+      "button": "Subscribe",
+      "subscribing": "Subscribing...",
+      "success": "Successfully subscribed! Check your email for confirmation.",
+      "errors": {
+        "invalidEmail": "Please enter a valid email address",
+        "alreadySubscribed": "You are already subscribed!",
+        "failed": "Failed to subscribe. Please try again later."
+      }
     }
   },
   "copyright": "© {{year}} AI Hub Navigation Platform. All rights reserved.",

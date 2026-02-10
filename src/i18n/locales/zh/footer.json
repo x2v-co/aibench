@@ -19,7 +19,14 @@
       "title": "订阅通讯",
       "description": "获取最新的 AI 工具发布通知和行业动态。",
       "placeholder": "您的邮箱地址",
-      "button": "订阅"
+      "button": "订阅",
+      "subscribing": "订阅中...",
+      "success": "订阅成功！请查看您的邮箱确认订阅。",
+      "errors": {
+        "invalidEmail": "请输入有效的邮箱地址",
+        "alreadySubscribed": "您已经订阅过了！",
+        "failed": "订阅失败，请稍后重试。"
+      }
     }
   },
   "copyright": "© {{year}} AI Hub 导航平台. 保留所有权利。",

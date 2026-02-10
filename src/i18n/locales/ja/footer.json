@@ -19,7 +19,14 @@
       "title": "ニュースレター",
       "description": "最新のAIツールリリース通知と業界アップデートを受け取りましょう。",
       "placeholder": "あなたのメールアドレス",
-      "button": "購読"
+      "button": "購読",
+      "subscribing": "購読中...",
+      "success": "購読成功！確認メールをご確認ください。",
+      "errors": {
+        "invalidEmail": "有効なメールアドレスを入力してください",
+        "alreadySubscribed": "すでに購読済みです！",
+        "failed": "購読に失敗しました。後でもう一度お試しください。"
+      }
     }
   },
   "copyright": "© {{year}} AIBenchナビゲーションプラットフォーム。すべての権利予約済み。",

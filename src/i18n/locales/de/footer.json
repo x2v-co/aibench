@@ -19,7 +19,14 @@
       "title": "Newsletter",
       "description": "Erhalten Sie die neuesten KI-Tool-Veröffentlichungsbenachrichtigungen und Branchen-Updates.",
       "placeholder": "Ihre E-Mail-Adresse",
-      "button": "Abonnieren"
+      "button": "Abonnieren",
+      "subscribing": "Abonnieren...",
+      "success": "Erfolgreich abonniert! Überprüfen Sie Ihre E-Mail zur Bestätigung.",
+      "errors": {
+        "invalidEmail": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
+        "alreadySubscribed": "Sie sind bereits abonniert!",
+        "failed": "Abonnement fehlgeschlagen. Bitte versuchen Sie es später erneut."
+      }
     }
   },
   "copyright": "© {{year}} AIBench Navigationsplattform. Alle Rechte vorbehalten.",

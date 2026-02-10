@@ -1,13 +1,64 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ROUTE_PATHS } from '@/constants/routes';
 import { SiGithub, SiX, SiFacebook } from 'react-icons/si';
-import { Cpu } from 'lucide-react';
+import { Cpu, Loader2 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { toast } from '@/components/ui/sonner';
 
 export const Footer: React.FC = () => {
   const { t } = useTranslation('footer');
   const currentYear = new Date().getFullYear();
+  const [email, setEmail] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubscribe = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    if (!email || !email.includes('@')) {
+      toast.error(t('sections.newsletter.errors.invalidEmail') || 'Please enter a valid email address');
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    try {
+      // EmailOctopus API endpoint
+      const API_KEY = import.meta.env.VITE_EMAILOCTOPUS_API_KEY || 'YOUR_EMAILOCTOPUS_API_KEY';
+      const LIST_ID = import.meta.env.VITE_EMAILOCTOPUS_LIST_ID || 'YOUR_LIST_ID';
+
+      const response = await fetch(`https://emailoctopus.com/api/1.6/lists/${LIST_ID}/contacts`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          api_key: API_KEY,
+          email_address: email,
+          status: 'SUBSCRIBED'
+        })
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        toast.success(t('sections.newsletter.success') || 'Successfully subscribed! Check your email for confirmation.');
+        setEmail('');
+      } else {
+        // Handle specific error cases
+        if (data.error && data.error.code === 'MEMBER_EXISTS_WITH_EMAIL_ADDRESS') {
+          toast.info(t('sections.newsletter.errors.alreadySubscribed') || 'You are already subscribed!');
+        } else {
+          throw new Error(data.error?.message || 'Subscription failed');
+        }
+      }
+    } catch (error) {
+      console.error('Newsletter subscription error:', error);
+      toast.error(t('sections.newsletter.errors.failed') || 'Failed to subscribe. Please try again later.');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <footer className="py-12 border-t bg-background">
@@ -75,17 +126,29 @@ export const Footer: React.FC = () => {
           <div>
             <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider">{t('sections.newsletter.title')}</h3>
             <p className="mb-4 text-sm text-muted-foreground">{t('sections.newsletter.description')}</p>
-            <form className="flex gap-2" onSubmit={(e) => e.preventDefault()}>
+            <form className="flex gap-2" onSubmit={handleSubscribe}>
               <input
                 type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 placeholder={t('sections.newsletter.placeholder')}
-                className="w-full px-3 py-2 text-sm transition-all border rounded-md bg-muted/50 border-border focus:outline-none focus:ring-1 focus:ring-brand-blue"
+                className="w-full px-3 py-2 text-sm transition-all border rounded-md bg-muted/50 border-border focus:outline-none focus:ring-1 focus:ring-brand-blue disabled:opacity-50 disabled:cursor-not-allowed"
+                disabled={isSubmitting}
+                required
               />
               <button
                 type="submit"
-                className="px-4 py-2 text-sm font-medium text-white transition-colors rounded-md bg-brand-blue hover:bg-brand-blue/90"
+                disabled={isSubmitting}
+                className="px-4 py-2 text-sm font-medium text-white transition-colors rounded-md bg-brand-blue hover:bg-brand-blue/90 disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
               >
-                {t('sections.newsletter.button')}
+                {isSubmitting ? (
+                  <>
+                    <Loader2 className="w-4 h-4 animate-spin" />
+                    <span className="hidden sm:inline">{t('sections.newsletter.subscribing') || 'Subscribing...'}</span>
+                  </>
+                ) : (
+                  t('sections.newsletter.button')
+                )}
               </button>
             </form>
           </div>

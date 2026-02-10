@@ -19,7 +19,14 @@
       "title": "Boletín",
       "description": "Recibe las últimas notificaciones de lanzamiento de herramientas de IA y actualizaciones de la industria.",
       "placeholder": "Tu dirección de correo electrónico",
-      "button": "Suscribirse"
+      "button": "Suscribirse",
+      "subscribing": "Suscribiendo...",
+      "success": "¡Suscripción exitosa! Revisa tu correo para confirmar.",
+      "errors": {
+        "invalidEmail": "Por favor ingresa una dirección de correo válida",
+        "alreadySubscribed": "¡Ya estás suscrito!",
+        "failed": "Fallo en la suscripción. Por favor intenta de nuevo más tarde."
+      }
     }
   },
   "copyright": "© {{year}} Plataforma de navegación AIBench. Todos los derechos reservados.",
