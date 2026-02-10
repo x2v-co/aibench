@@ -30,7 +30,7 @@ const Submit: React.FC = () => {
     const formData = new FormData(e.currentTarget);
 
     // Add Web3Forms access key
-    formData.append('access_key', 'YOUR_WEB3FORMS_ACCESS_KEY');
+    formData.append('access_key', '916265fd-8bdb-4dde-b31d-9863627e14c0');
 
     // Add subject for better email organization
     formData.append('subject', `New Tool Submission: ${formData.get('tool-name')}`);
