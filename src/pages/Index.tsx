@@ -78,8 +78,8 @@ const Index: React.FC = () => {
       <Header />
 
       <main className="flex-grow">
-        {/* Hero Section */}
-        <HeroSection />
+        {/* Hero Section - Only show when no filters are applied */}
+        {!hasActiveFilters && <HeroSection />}
 
         {/* Featured Tools Section - Only show when no filters are applied to keep UI clean */}
         {!hasActiveFilters && (
