@@ -1,12 +1,16 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { Search, PlusCircle, Menu } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { ROUTE_PATHS } from '@/constants/routes';
+import { LanguageSwitcher } from '@/components/LanguageSwitcher';
 import { motion } from 'framer-motion';
 
 export const Header = () => {
+  const { t } = useTranslation('header');
+
   return (
     <header className="sticky top-0 z-50 w-full glass-panel border-b">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between gap-4">
@@ -30,7 +34,7 @@ export const Header = () => {
               }`
             }
           >
-            首页
+            {t('navigation.home')}
           </NavLink>
           <NavLink
             to={ROUTE_PATHS.COLLECTIONS}
@@ -40,7 +44,7 @@ export const Header = () => {
               }`
             }
           >
-            专题集合
+            {t('navigation.collections')}
           </NavLink>
           <NavLink
             to={ROUTE_PATHS.ABOUT}
@@ -50,7 +54,7 @@ export const Header = () => {
               }`
             }
           >
-            关于我们
+            {t('navigation.about')}
           </NavLink>
         </nav>
 
@@ -59,7 +63,7 @@ export const Header = () => {
           <div className="relative hidden lg:block w-full max-w-xs">
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
             <Input
-              placeholder="搜索 AI 工具..."
+              placeholder={t('search.placeholder')}
               className="pl-10 h-9 bg-secondary/50 border-none focus-visible:ring-brand-blue"
             />
           </div>
@@ -67,9 +71,11 @@ export const Header = () => {
           <Link to={ROUTE_PATHS.SUBMIT}>
             <Button variant="default" size="sm" className="bg-brand-blue hover:bg-blue-600 gap-2">
               <PlusCircle className="h-4 w-4" />
-              <span className="hidden sm:inline">提交工具</span>
+              <span className="hidden sm:inline">{t('submit.button')}</span>
             </Button>
           </Link>
+
+          <LanguageSwitcher />
 
           <Button variant="ghost" size="icon" className="md:hidden">
             <Menu className="h-5 w-5" />

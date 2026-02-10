@@ -1,0 +1,13 @@
+{
+  "navigation": {
+    "home": "Accueil",
+    "collections": "Collections",
+    "about": "À propos"
+  },
+  "search": {
+    "placeholder": "Rechercher des outils IA..."
+  },
+  "submit": {
+    "button": "Soumettre un outil"
+  }
+}

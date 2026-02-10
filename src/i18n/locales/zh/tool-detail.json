@@ -1,0 +1,37 @@
+{
+  "notFound": {
+    "title": "工具未找到",
+    "description": "抱歉，您访问的工具不存在或已被移除。",
+    "backButton": "返回首页"
+  },
+  "breadcrumb": {
+    "home": "首页"
+  },
+  "back": "返回",
+  "featured": "精选",
+  "rating": "评分",
+  "visits": "访问",
+  "actions": {
+    "visit": "访问官网",
+    "favorite": "收藏",
+    "share": "分享"
+  },
+  "sections": {
+    "introduction": {
+      "title": "工具介绍"
+    },
+    "tags": {
+      "title": "标签"
+    },
+    "info": {
+      "title": "工具信息",
+      "category": "分类",
+      "uncategorized": "未分类",
+      "addedDate": "收录时间",
+      "pricing": "定价模式"
+    },
+    "related": {
+      "title": "相关工具"
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "notFound": {
+    "title": "Tool nicht gefunden",
+    "description": "Entschuldigung, das von Ihnen besuchte Tool existiert nicht oder wurde entfernt.",
+    "backButton": "Zurück zur Startseite"
+  },
+  "breadcrumb": {
+    "home": "Startseite"
+  },
+  "back": "Zurück",
+  "featured": "Empfohlen",
+  "rating": "Bewertung",
+  "visits": "Besuche",
+  "actions": {
+    "visit": "Webseite besuchen",
+    "favorite": "Favorit",
+    "share": "Teilen"
+  },
+  "sections": {
+    "introduction": {
+      "title": "Tool-Einführung"
+    },
+    "tags": {
+      "title": "Tags"
+    },
+    "info": {
+      "title": "Tool-Informationen",
+      "category": "Kategorie",
+      "uncategorized": "Nicht kategorisiert",
+      "addedDate": "Hinzufügedatum",
+      "pricing": "Preismodell"
+    },
+    "related": {
+      "title": "Verwandte Tools"
+    }
+  }
+}

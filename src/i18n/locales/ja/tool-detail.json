@@ -1,0 +1,37 @@
+{
+  "notFound": {
+    "title": "ツールが見つかりません",
+    "description": "申し訳ありませんが、アクセスしたツールは存在しないか、削除されました。",
+    "backButton": "ホームに戻る"
+  },
+  "breadcrumb": {
+    "home": "ホーム"
+  },
+  "back": "戻る",
+  "featured": "注目",
+  "rating": "評価",
+  "visits": "アクセス",
+  "actions": {
+    "visit": "公式サイトを訪問",
+    "favorite": "お気に入り",
+    "share": "共有"
+  },
+  "sections": {
+    "introduction": {
+      "title": "ツール紹介"
+    },
+    "tags": {
+      "title": "タグ"
+    },
+    "info": {
+      "title": "ツール情報",
+      "category": "カテゴリ",
+      "uncategorized": "未分類",
+      "addedDate": "追加日",
+      "pricing": "料金モデル"
+    },
+    "related": {
+      "title": "関連ツール"
+    }
+  }
+}

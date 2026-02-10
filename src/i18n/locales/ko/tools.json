@@ -1,0 +1,302 @@
+{
+  "t1": {
+    "name": "ChatGPT",
+    "description": "Advanced conversational AI language model developed by OpenAI.",
+    "longDescription": "ChatGPT is a state-of-the-art conversational AI model capable of understanding and generating human-like text across a wide range of topics."
+  },
+  "t2": {
+    "name": "Midjourney",
+    "description": "Leading AI art generation tool that transforms text descriptions into beautiful images.",
+    "longDescription": "Midjourney is a premier AI art generation platform that creates stunning visuals from text prompts, known for its artistic quality and creative capabilities."
+  },
+  "t3": {
+    "name": "Claude",
+    "description": "High-intelligence, safe, and honest AI assistant developed by Anthropic.",
+    "longDescription": "Claude is Anthropic's AI assistant designed to be helpful, harmless, and honest. It excels at analysis, writing, and complex reasoning tasks."
+  },
+  "t4": {
+    "name": "GitHub Copilot",
+    "description": "Your AI pair programming partner that assists development in real-time through code suggestions.",
+    "longDescription": "GitHub Copilot is an AI-powered code completion tool that helps developers write code faster and more efficiently."
+  },
+  "t5": {
+    "name": "Sora",
+    "description": "Video generation model released by OpenAI that can create realistic videos up to one minute long.",
+    "longDescription": "Sora is OpenAI's text-to-video model capable of generating highly realistic videos up to one minute in length from text prompts."
+  },
+  "t6": {
+    "name": "Notion AI",
+    "description": "AI writing, summarization, and editing tools integrated directly into Notion notes.",
+    "longDescription": "Notion AI brings AI capabilities directly into your Notion workspace for writing, summarizing, and improving content."
+  },
+  "t7": {
+    "name": "Doubao",
+    "description": "Multi-functional AI conversational assistant by ByteDance, supporting writing, document analysis, image and music generation.",
+    "longDescription": "Doubao is ByteDance's multi-functional AI chatbot built on the Doubao large model. It supports multi-turn conversations, PDF analysis, text-to-image generation with partial repainting and image extension, music generation in 11 styles, and programming assistance with code import and GitHub repository integration."
+  },
+  "t8": {
+    "name": "Jimeng AI",
+    "description": "One-stop AI video, image, and digital human creation tool by ByteDance.",
+    "longDescription": "Jimeng AI is ByteDance's all-in-one AI creation platform supporting text-to-image, image-to-image, and AI video creation. It provides smart canvas for partial repainting, image expansion, removal, and matting, AI digital human generation, lip-sync dubbing, and intelligent multi-frame video splicing."
+  },
+  "t9": {
+    "name": "TRAE",
+    "description": "AI programming IDE by ByteDance, integrated with AI Coding Agent supporting natural language-driven development.",
+    "longDescription": "TRAE is ByteDance's AI programming IDE integrated with AI Coding Agent that can understand requirements, mobilize tools, and independently complete various development tasks. It supports TRAE SOLO mode for automated development workflows, Cue intelligent code prediction and continuation, local-first privacy protection strategy, and custom intelligent agent and tool integration."
+  },
+  "t10": {
+    "name": "Metaso AI Search",
+    "description": "The most useful AI search tool, ad-free, direct to results.",
+    "longDescription": "Metaso AI Search is an ad-free AI search engine that directly provides answers to search results instead of traditional link lists. It supports multiple modes including deep search and academic search to help users quickly get the information they need."
+  },
+  "t11": {
+    "name": "Miaoda",
+    "description": "No-code AI application development platform by Baidu, create apps with one sentence.",
+    "longDescription": "Miaoda is Baidu's no-code AI application development platform. Powered by large model technology, users without programming background can quickly create H5, websites, and mini-programs through natural language conversation or simple drag-and-drop operations within 5 minutes. Built-in professional intelligent agents simulate team division of labor, integrating Baidu Intelligent Cloud and third-party services providing hundreds of interface capabilities."
+  },
+  "t12": {
+    "name": "Duiyou AI",
+    "description": "AI design service platform by Alibaba Design Team, integrating multiple AI tools and design resources.",
+    "longDescription": "Duiyou AI is a professional design service platform created by Alibaba Design, integrating text-to-image, image-to-image, video generation, ComfyUI workflows, custom model training, and more. The AI toolbox includes 12+ tools such as AI model video, AI virtual try-on, image translation, AI product images, marketing posters, and smart matting."
+  },
+  "t13": {
+    "name": "Huiwa",
+    "description": "Leading domestic AIGC e-commerce marketing tool, focusing on product photography and content generation for fashion.",
+    "longDescription": "Huiwa is a leading domestic AIGC e-commerce marketing tool deeply focused on the fashion sector. It uses advanced AIGC technology to provide e-commerce sellers with low-cost, high-quality product photos and marketing content. It has served 57 top brands including Semir and SHEIN, supporting AI model training, product image generation, model face replacement, limb repair, and image-to-video functions."
+  },
+  "t14": {
+    "name": "Office Xiaohuanxiong",
+    "description": "AI office assistant by SenseTime, a one-stop creation, analysis, and knowledge management platform.",
+    "longDescription": "Office Xiaohuanxiong is SenseTime's AI office assistant that deeply combines AI large model capabilities with document editing and data analysis scenarios. Based on the Raccoon Three-Step Method (PAW) design: Plan task decomposition, Analyze data processing, Write content generation. Supports million-level data processing in seconds, one-click PPT generation, and multimodal content analysis."
+  },
+  "t15": {
+    "name": "Guangsu Writing",
+    "description": "AI writing and PPT generation tool by Zuoyebang, up to 15,000 words per article.",
+    "longDescription": "Guangsu Writing is Zuoyebang's AI writing tool supporting one-click completion of article outlines and full content creation, intelligent PPT presentation generation. It provides rewriting, continuation, expansion, plagiarism reduction, translation, summarization, and other functions, covering various templates including academic rewriting, lesson plans, event planning, press releases, speeches, and Xiaohongshu content."
+  },
+  "t16": {
+    "name": "Gaoding AI Community",
+    "description": "Design Agent and AI creative community by Gaoding, generate design works with one sentence.",
+    "longDescription": "Gaoding AI Community is Gaoding's design agent and AI creative community where users only need to input one sentence, and the system can understand requirements, break down task plans, and generate design works. The built-in infinite canvas supports smart removal, image expansion, matting, and other functions, integrating multiple models such as Doubao, Deepseek, and Jimeng to automatically match the best solution."
+  },
+  "t17": {
+    "name": "CodeFlying",
+    "description": "Zero-code AI application development platform, generate mini-programs, APPs, or H5 web apps with one sentence.",
+    "longDescription": "CodeFlying is a zero-code AI application development platform. Users simply describe requirements in one sentence, and AI can automatically generate mini-programs, APPs, or H5 web applications without writing code. Supports WeChat mini-programs, Android APPs, HarmonyOS, H5 web pages, and other platforms, provides independent backend management system, supports one-click publishing and complete source code download."
+  },
+  "t18": {
+    "name": "LiblibAI",
+    "description": "One-stop AI content creation generation platform, integrating top AI models for image and video generation.",
+    "longDescription": "LiblibAI is a one-stop AI content creation generation platform integrating top AI models to provide image generation, video generation, video effects, and asset management. Supports LoRA model training, has 6000+ AI application tool library, provides community ecosystem and remix replication functions, and video creator revenue plan."
+  },
+  "t19": {
+    "name": "HaiSnap",
+    "description": "AI zero-code application development platform, visual editing and iteration, one-click cloud deployment.",
+    "longDescription": "HaiSnap is an AI zero-code application development platform. Users only need to describe requirements in natural language, and the platform can automatically generate prototypes and front-end code. Supports visual drag-and-drop editing, one-click cloud deployment for exclusive domain names, integrates 50+ pre-trained AI models, supports complete source code download with commercial-use code."
+  },
+  "t20": {
+    "name": "Cappt",
+    "description": "AI PPT creation tool, fully automated from design to beautification.",
+    "longDescription": "Cappt is an AI PPT creation tool that achieves fully automated workflow from content generation to intelligent design and beautification. Users only need to input a topic or keywords to automatically generate a complete PPT framework. Provides AI content writing, one-click skin changing, multiple color schemes, supports PPT download compatible with WPS and Office."
+  },
+  "t21": {
+    "name": "Xiaoin",
+    "description": "AI knowledge assistant based on large language models, generate long articles of 40,000 words in 3 minutes.",
+    "longDescription": "Xiaoin is an AI knowledge assistant application based on Large Language Models (LLM) and Retrieval-Augmented Generation (RAG) technology, centered on personal knowledge bases. Supports generating standardized format, professional content long articles from just a title, provides rewriting and plagiarism reduction, AI trace removal, personal knowledge base construction, covering 100+ writing scenarios."
+  },
+  "t22": {
+    "name": "Mowen",
+    "description": "AI note tool designed for creators, providing convenient writing and editing functions.",
+    "longDescription": "Mowen is an AI note tool designed specifically for creators, supporting Web version and WeChat mini-programs, can upload images, audio, PDF, and other file types. Provides AI voice notes, AI listening-reading, AI polishing and other intelligent creation assistance, supports rich text editing and multiple editor styles, provides API interface and MCP service supporting integration with AI browsers."
+  },
+  "t23": {
+    "name": "YouMind",
+    "description": "AI-native tool by former Alibaba employee Yubo, improving creation efficiency and information integration.",
+    "longDescription": "YouMind is an AI-native tool launched by former Alibaba employee Yubo, integrating capabilities from top large models like Anthropic, OpenAI, and Meta. Supports quickly capturing information from webpages, videos, podcasts, PDFs, and images, organizing content through Snips, Thoughts, and Boards functions, providing AI-assisted creation and browser extensions."
+  },
+  "t24": {
+    "name": "Cailiaoxing AI",
+    "description": "AI writing tool designed for secretary work, generate original high-quality official documents in 90 seconds.",
+    "longDescription": "Cailiaoxing AI is an AI writing tool designed specifically for secretary work, using self-developed AI models to generate 100% original documents within 90 seconds, supporting up to 12,000 characters output. Provides 400,000 official document templates updated daily, supports both step-by-step and conversational AI writing methods, covering 13 core functions across the entire official document writing workflow."
+  },
+  "t25": {
+    "name": "Bairimeng",
+    "description": "Leading AI creation platform, can generate video content up to 50 minutes long.",
+    "longDescription": "Bairimeng is an AI video creation platform by Guangmo Technology that uses natural language processing to let users quickly generate video content from text input. Supports text-to-video up to 6 minutes, provides multiple character avatar libraries, supports various styles including Guofeng Xianxia, AI short dramas, children's stories, with automatic storyboard and character consistency maintenance."
+  },
+  "t26": {
+    "name": "HeyGen",
+    "description": "Professional AI digital human video creation platform, quickly create professional-quality digital human videos.",
+    "longDescription": "HeyGen is a professional AI digital human video creation platform dedicated to simplifying video production. Provides video creation agents for quickly generating complete content, supports multi-language voice cloning and dubbing, AI automatic subtitle generation, video translation in 175+ languages, 500+ style custom avatar library."
+  },
+  "t27": {
+    "name": "Kling AI",
+    "description": "AI image and video creation platform by Kuaishou, supporting text-to-video and image-to-video.",
+    "longDescription": "Kling AI is Kuaishou's AI image and video creation platform, providing web version and mobile app. Supports text-to-video and image-to-video capabilities, Ling animation canvas collaborative creation platform supports 5 people creating simultaneously, AI digital human 2.0 function supports precise motion control, single generation up to 5 minutes."
+  },
+  "t28": {
+    "name": "Cursor",
+    "description": "GPT-based AI code editor, supporting automatic code generation and intelligent completion.",
+    "longDescription": "Cursor is an AI code editor based on GPT-3.5 and GPT-4.0, supporting Python, Java, C#, JavaScript, and other languages. Provides code automatic generation and intelligent completion, bug detection and fixing and debugging, code explanation and optimization suggestions, automatic document generation. Cursor 2.0 is equipped with self-developed coding model Composer, completing complex tasks within 30 seconds."
+  },
+  "t29": {
+    "name": "Coze",
+    "description": "AI agent development platform by ByteDance, build AI applications with one sentence.",
+    "longDescription": "Coze is ByteDance's AI office assistant and development platform that simplifies workflows through AI technology. Provides Agent Skills to add specific domain skill packages to AI, Agent Plan to set long-term goals and automatically plan execution paths, Agent Coding one-stop cloud development platform, video creation Skill generates videos from natural language."
+  },
+  "t30": {
+    "name": "Gemini",
+    "description": "Multimodal AI large model by Google, supporting text, image, audio, and video processing.",
+    "longDescription": "Gemini is Google's multimodal AI large model series with powerful multimodal capabilities. Supports processing and generation of text, images, audio, video, and code, deep research integrates web information to generate professional reports, through Gems function creates exclusive AI experts, interconnects with Google Calendar, Keep and other applications for automation."
+  },
+  "t31": {
+    "name": "Perplexity",
+    "description": "Powerful AI search engine and deep research tool, supporting continuous follow-up questions.",
+    "longDescription": "Perplexity is a powerful AI search engine and deep research tool that can quickly provide answers like traditional search engines, remembers context, and supports continuous follow-up questions. Integrates multiple top AI models including Claude Sonnet, GPT-5, Gemini 2.5 Pro, provides deep search, Labs automation services, Study learning mode, and other functions."
+  },
+  "t32": {
+    "name": "Moyin Workshop",
+    "description": "Professional AI dubbing tool, 800+ voices to easily create realistic voiceovers.",
+    "longDescription": "Moyin Workshop is a professional AI dubbing tool with 800+ voices and 1000+ styles, supporting text-to-speech and voice cloning. One-sentence cloning technology achieves 1:1 original sound reproduction, voice pinching function automatically generates voices that meet requirements through text description, supports fine control including speed adjustment, polyphonic character processing, and pause control."
+  },
+  "t33": {
+    "name": "ElevenLabs",
+    "description": "AI text-to-speech tool supporting 29 languages and 10,000+ voices.",
+    "longDescription": "ElevenLabs is a professional AI text-to-speech tool providing Eleven v3, Multilingual v2, and Flash v2.5 models, supporting 29+ languages and 10,000+ voices. Supports voice cloning that accurately reproduces voice characteristics from minutes of audio samples, Scribe v2 speech-to-text supports 90+ language recognition with 98% accuracy, also provides AI music generation and sound effect generation."
+  },
+  "t34": {
+    "name": "Suno",
+    "description": "Professional high-quality AI song and music creation platform, generate complete songs from text input.",
+    "longDescription": "Suno is a professional high-quality AI song and music creation platform where users can generate complete songs with vocals by entering text prompts, without any instrument tools. Supports pop, R&B, hip-hop, country, electronic, and other styles, supports song generation and input in 50 languages, based on self-developed music large model Chirp can generate 2-minute songs."
+  },
+  "t35": {
+    "name": "Quark",
+    "description": "Comprehensive app by Alibaba integrating AI search, cloud storage, and document creation.",
+    "longDescription": "Quark is Alibaba's comprehensive AI application platform integrating AI search, cloud storage, and document creation. Provides intelligent search engine based on AI technology for fast and accurate search results, cloud storage service with 6T super-large space and multi-device backup, file tool center supporting PDF and multi-format file conversion and online editing, supports mobile, tablet, and PC multi-device collaboration."
+  },
+  "t36": {
+    "name": "Claude Code",
+    "description": "Command-line-based AI programming tool by Anthropic, integrated with Claude Opus 4.",
+    "longDescription": "Claude Code is Anthropic's command-line-based AI programming tool integrated with Claude Opus 4 language model. Supports 200K ultra-long context for quickly indexing entire codebases, coordinating consistent code modifications across files, compatible with mainstream development tools like VS Code, JetBrains, /security-review command can detect vulnerabilities like SQL injection, XSS."
+  },
+  "t37": {
+    "name": "remove.bg",
+    "description": "Powerful AI image background removal tool, quickly and automatically remove image backgrounds.",
+    "longDescription": "remove.bg is a powerful AI image background removal tool that can quickly and automatically remove backgrounds from images, suitable for portraits, products, animals, and other object types. Upload an image to automatically remove the background in seconds, provides magic brush for precise object removal and restoration, supports web version, desktop, and PS, Figma, Sketch and other plugin versions."
+  },
+  "t38": {
+    "name": "Wawawriter",
+    "description": "AI novel and content writing assistant, supporting automatic generation of story outlines, plot nodes, and main text.",
+    "longDescription": "Wawawriter is Hangzhou Gravity Zhixing Technology's AI novel and content writing assistant, designed to help authors improve writing efficiency and creation quality. Supports AI automatic generation of story outlines, plot nodes, and main text, multi-type document creation including official accounts, papers, PPT, resumes, etc., provides novel-script-storyboard complete creation chain."
+  },
+  "t39": {
+    "name": "Xunfei Huiwen",
+    "description": "Free one-stop AIGC content operation platform by iFLYTEK.",
+    "longDescription": "Xunfei Huiwen is iFLYTEK's free one-stop AIGC content operation platform, integrating three major models: Xinghuo MAX, DeepSeek V3, and DeepSeek R1. Provides intelligent writing for quickly generating hot articles, marketing copy, academic papers, etc., topic recommendation based on big data analysis, AI image matching and typesetting automatic generation, supports one-click distribution across multiple platforms including WeChat, Toutiao, Xiaohongshu."
+  },
+  "t40": {
+    "name": "Gaoding AI Copywriting",
+    "description": "Xiaohongshu, official accounts, short video AI copywriting generation tool.",
+    "longDescription": "Gaoding AI Copywriting is Gaoding Design's AI copywriting generation tool that can quickly generate diverse copywriting content. Users only need to input keywords or topics to generate copy suitable for different scenarios based on requirements, supports Xiaohongshu notes, advertising, social media, e-commerce product descriptions, and other content generation, supports formal, humorous, inspirational, and other style selections."
+  },
+  "t41": {
+    "name": "CodeGemma",
+    "description": "Open-source large language model by Google focused on code generation and understanding.",
+    "longDescription": "CodeGemma is Google's open-source large language model focused on code generation and understanding, trained on extensive English programming and mathematics data to enhance logic and mathematical reasoning capabilities. Provides code completion and generation, natural language understanding, multi-programming language support, including CodeGemma 2B, 7B, and 7B Instruct three versions."
+  },
+  "t42": {
+    "name": "Wenxin Kuaima",
+    "description": "Baidu's AI programming assistant based on Wenxin large model, supporting 100+ programming languages.",
+    "longDescription": "Wenxin Kuaima is Baidu's AI programming assistant based on Wenxin large model, supporting 100+ programming languages, providing code completion, code generation, code explanation, unit test generation, and other intelligent functions. Compatible with VS Code, JetBrains, and other mainstream IDEs, helping developers improve programming efficiency."
+  },
+  "t43": {
+    "name": "Code Xiaohuanxiong",
+    "description": "SenseTime's AI programming assistant, covering the entire development cycle from requirements analysis to testing.",
+    "longDescription": "Code Xiaohuanxiong is SenseTime's AI programming assistant covering the entire development cycle from requirements analysis to testing. Supports 30+ programming languages, compatible with multiple mainstream IDEs, provides code completion, code generation, code explanation, bug fixing, and other functions, helping developers improve efficiency across the entire process."
+  },
+  "t44": {
+    "name": "Qoder",
+    "description": "Alibaba's Agentic programming platform, AI development partner for real-world engineering.",
+    "longDescription": "Qoder is Alibaba's Agentic programming platform, an AI development partner for real-world engineering. Supports 200+ programming languages, provides Quest Mode for complex task automation, can understand project context and perform intelligent code generation and optimization."
+  },
+  "t45": {
+    "name": "CodeGeeX",
+    "description": "Open-source AI programming assistant by Zhipu AI, supporting code generation and translation.",
+    "longDescription": "CodeGeeX is Zhipu AI's open-source AI programming assistant based on open-source models providing code generation, code completion, code translation, and other functions. Supports multiple programming languages, can be integrated into mainstream IDEs like VS Code, completely free to use."
+  },
+  "t46": {
+    "name": "AiPPT",
+    "description": "AI quickly generates high-quality PPT, one-click generates professional presentations.",
+    "longDescription": "AiPPT is a professional AI PPT generation tool where users only need to input a topic or upload a document to quickly generate high-quality presentations. Provides rich template library and intelligent layout functions, supports one-click beautification and multiple export formats, suitable for business reports, education and training, and other scenarios."
+  },
+  "t47": {
+    "name": "Dify",
+    "description": "Open-source LLM application development platform for rapidly building AI-native applications.",
+    "longDescription": "Dify is an open-source LLM application development platform helping developers quickly build AI-native applications. Provides visual Prompt orchestration, RAG engine, Agent framework, model management, and other functions, supports accessing multiple large language models, suitable for enterprise AI application development."
+  },
+  "t48": {
+    "name": "Stable Diffusion",
+    "description": "Open-source AI image generation model supporting local deployment and custom training.",
+    "longDescription": "Stable Diffusion is an open-source AI image generation model released by Stability AI. Supports text-to-image, image-to-image, image restoration, and other functions, can run deployed locally, supports LoRA and other custom model training, has a massive community ecosystem and rich model resources."
+  },
+  "t49": {
+    "name": "DALL-E 3",
+    "description": "AI image generation model by OpenAI, integrated into ChatGPT.",
+    "longDescription": "DALL-E 3 is OpenAI's latest AI image generation model, now integrated into ChatGPT Plus. Compared to previous generations, it significantly improves image quality and text understanding capabilities, can accurately understand complex text descriptions and generate high-quality images, supports multiple art styles."
+  },
+  "t50": {
+    "name": "Tongyi Qianwen",
+    "description": "Large language model by Alibaba Cloud, supporting multimodal understanding and generation.",
+    "longDescription": "Tongyi Qianwen is Alibaba Cloud's large language model series supporting text, image, audio, and other multimodal understanding and generation. Provides dialogue, writing, code, mathematics, and other capabilities, has open-sourced multiple versions for developers, supports API calls and local deployment."
+  },
+  "t51": {
+    "name": "Wenxin Yiyan",
+    "description": "Knowledge-enhanced large language model by Baidu, supporting multi-scenario applications.",
+    "longDescription": "Wenxin Yiyan is Baidu's knowledge-enhanced large language model based on Wenxin large model technology. Supports dialogue, writing, code, mathematics, logical reasoning, and other capabilities, provides rich plugin ecosystem, has been widely applied to search, office, creation, and other scenarios."
+  },
+  "t52": {
+    "name": "Kimi",
+    "description": "Long-text AI assistant by Moonshot AI, supporting 200,000 character ultra-long context.",
+    "longDescription": "Kimi is Moonshot AI's long-text AI assistant supporting 200,000 character ultra-long context processing. Excels at long-text scenarios like document analysis, paper reading, code understanding, provides web version and mobile applications, supports file upload and internet search functions."
+  },
+  "t53": {
+    "name": "DeepSeek",
+    "description": "High-performance open-source large language model by DeepSeek.",
+    "longDescription": "DeepSeek is DeepSeek's high-performance open-source large language model, performing excellently in multiple benchmark tests. Provides DeepSeek-V3, DeepSeek-R1, and other versions, supports dialogue, code, mathematical reasoning, and other capabilities, API prices are highly competitive."
+  },
+  "t54": {
+    "name": "Zhipu Qingyan",
+    "description": "AI assistant by Zhipu AI, based on GLM large model.",
+    "longDescription": "Zhipu Qingyan is Zhipu AI's AI assistant based on self-developed GLM large model. Supports dialogue, writing, code, image understanding, and other capabilities, provides rich intelligent agent ecosystem, supports API calls and enterprise customization services."
+  },
+  "t55": {
+    "name": "Xinghuo",
+    "description": "Cognitive large model by iFLYTEK, excelling in speech and language processing.",
+    "longDescription": "Xinghuo is iFLYTEK's cognitive large model with deep accumulation in speech recognition, speech synthesis, and natural language processing. Supports dialogue, writing, code, mathematics, and other capabilities, provides rich industry solutions and API services."
+  },
+  "t56": {
+    "name": "Runway",
+    "description": "Professional AI video editing and generation platform, providing Gen-2 video generation model.",
+    "longDescription": "Runway is a professional AI video editing and generation platform providing advanced video generation models like Gen-2. Supports text-to-video, image-to-video, video editing, green screen matting, and other functions, widely used in professional fields like film production and advertising creativity."
+  },
+  "t57": {
+    "name": "Pika",
+    "description": "AI video generation tool supporting text and image to creative video generation.",
+    "longDescription": "Pika is an emerging AI video generation tool supporting creative video generation from text descriptions or images. Provides simple and easy-to-use interface, supports multiple video styles and effects, suitable for social media content creation and creative expression."
+  },
+  "t58": {
+    "name": "Canva AI",
+    "description": "AI design features integrated into Canva, one-click generate design materials.",
+    "longDescription": "Canva AI is Canva platform's integrated AI design feature suite, including Magic Design one-click design generation, Magic Write AI writing, Magic Edit image editing, Text to Image image generation, and other functions, making design creation simpler and more efficient."
+  },
+  "t59": {
+    "name": "Meitu AI",
+    "description": "AI image processing tool by Meitu, supporting smart retouching and beauty.",
+    "longDescription": "Meitu AI is Meitu Company's AI image processing tool providing smart retouching, AI beauty, AI face swap, AI portraits, and other functions. Based on Meitu's years of image processing technology accumulation, provides simple and easy-to-use mobile and web applications."
+  },
+  "t60": {
+    "name": "Feishu Miaoji",
+    "description": "AI meeting record and transcription tool by ByteDance Feishu.",
+    "longDescription": "Feishu Miaoji is ByteDance Feishu's AI meeting record and transcription tool, supporting real-time speech-to-text, intelligent meeting minutes generation, multi-language translation, and other functions. Deeply integrated with Feishu, supports meeting recording, content search, and team collaboration."
+  }
+}

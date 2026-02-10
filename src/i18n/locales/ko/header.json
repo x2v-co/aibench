@@ -1,0 +1,13 @@
+{
+  "navigation": {
+    "home": "홈",
+    "collections": "컬렉션",
+    "about": "회사 소개"
+  },
+  "search": {
+    "placeholder": "AI 도구 검색..."
+  },
+  "submit": {
+    "button": "도구 제출"
+  }
+}

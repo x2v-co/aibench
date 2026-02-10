@@ -1,0 +1,16 @@
+{
+  "title": "探索所有工具",
+  "searchResults": "搜索结果",
+  "resetFilters": "重置所有筛选",
+  "noResults": {
+    "title": "未找到匹配的工具",
+    "description": "尝试调整您的搜索关键词或选择不同的分类，发现更多精彩的 AI 资源。",
+    "clearFilters": "清除所有筛选"
+  },
+  "newsletter": {
+    "title": "订阅我们的周刊",
+    "description": "每周获取最前沿的 AI 工具动态和行业深度分析，走在科技最前沿。",
+    "placeholder": "输入您的邮箱地址",
+    "button": "立即订阅"
+  }
+}

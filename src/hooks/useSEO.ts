@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 
 interface SEOProps {
   title?: string;
@@ -26,7 +27,13 @@ export const useSEO = ({
   url,
   type,
 }: SEOProps = {}) => {
+  const { i18n } = useTranslation();
+  const currentLang = i18n.language;
+
   useEffect(() => {
+    // Update HTML lang attribute
+    document.documentElement.lang = currentLang;
+
     // Update title
     const fullTitle = title ? `${title} | AIBench` : defaultSEO.title;
     document.title = fullTitle;
@@ -52,12 +59,13 @@ export const useSEO = ({
     updateMeta('description', description || defaultSEO.description);
     updateMeta('keywords', keywords || defaultSEO.keywords);
 
-    // Open Graph tags
+    // Open Graph tags with locale
     updateMeta('og:title', fullTitle, true);
     updateMeta('og:description', description || defaultSEO.description, true);
     updateMeta('og:image', image || defaultSEO.image, true);
     updateMeta('og:url', url || defaultSEO.url, true);
     updateMeta('og:type', type || defaultSEO.type, true);
+    updateMeta('og:locale', currentLang === 'zh' ? 'zh_CN' : `${currentLang}_${currentLang.toUpperCase()}`, true);
 
     // Twitter tags
     updateMeta('twitter:title', fullTitle);
@@ -67,8 +75,9 @@ export const useSEO = ({
     // Cleanup function to reset to defaults when component unmounts
     return () => {
       document.title = defaultSEO.title;
+      document.documentElement.lang = 'en';
     };
-  }, [title, description, keywords, image, url, type]);
+  }, [title, description, keywords, image, url, type, currentLang]);
 };
 
 export default useSEO;

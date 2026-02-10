@@ -1,0 +1,50 @@
+{
+  "meta": {
+    "title": "关于我们 - AIHub",
+    "description": "AIHub是专业的AI工具导航平台，致力于帮助用户发现最适合自己需求的人工智能解决方案，提升工作效率和创造力。",
+    "keywords": "关于AIHub,AI工具导航,AI工具平台,人工智能导航"
+  },
+  "badge": "关于我们",
+  "title": "发现 AI 的无限可能",
+  "description": "AIHub 是一个专注于收录和推荐优质 AI 工具的导航平台。我们的使命是帮助用户发现最适合自己需求的人工智能解决方案，提升工作效率和创造力。",
+  "stats": {
+    "aiTools": "AI工具收录",
+    "categories": "工具分类",
+    "monthlyVisits": "月访问量",
+    "countries": "覆盖国家"
+  },
+  "features": {
+    "title": "我们的特色",
+    "subtitle": "致力于为用户提供最优质的 AI 工具发现体验",
+    "list": {
+      "curated": {
+        "title": "精选优质工具",
+        "description": "我们精心筛选全球最优秀的AI工具，确保每一款都能为您带来价值。"
+      },
+      "categorized": {
+        "title": "详细分类导航",
+        "description": "按照使用场景和功能特点进行分类，帮助您快速找到所需工具。"
+      },
+      "updated": {
+        "title": "实时更新",
+        "description": "持续追踪AI领域最新动态，第一时间收录新兴优质工具。"
+      },
+      "reviews": {
+        "title": "用户评价",
+        "description": "真实的用户评分和反馈，帮助您做出更明智的选择。"
+      }
+    }
+  },
+  "contact": {
+    "title": "联系我们",
+    "description": "如果您有任何问题、建议或合作意向，欢迎随时与我们联系。",
+    "email": {
+      "title": "邮箱联系",
+      "value": "contact@aihub.com"
+    },
+    "feedback": {
+      "title": "在线反馈",
+      "value": "提交工具或建议"
+    }
+  }
+}

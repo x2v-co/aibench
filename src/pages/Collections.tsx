@@ -2,42 +2,45 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
-import { Card, CardContent, CardHeader } from '@/components/ui/card';
+import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { aiTools, toolCategories } from '@/data/tools';
+import { useToolSearch } from '@/hooks/useToolSearch';
+import { useTranslatedTools } from '@/hooks/useTranslatedTools';
 import { useSEO } from '@/hooks/useSEO';
 import { motion } from 'framer-motion';
-import { ArrowRight, Sparkles, TrendingUp, Clock, Star } from 'lucide-react';
+import { Sparkles, TrendingUp, Clock, Star } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const Collections: React.FC = () => {
   const navigate = useNavigate();
+  const { t } = useTranslation('collections');
+  const { aiTools, toolCategories } = useTranslatedTools();
 
   useSEO({
-    title: '专题集合 - 精选AI工具合集',
-    description: '探索AIHub精心整理的AI工具合集，包括编辑精选、高分推荐、热门工具、最新收录等多个专题，帮助您快速发现优质AI工具。',
-    keywords: 'AI工具合集,精选AI工具,热门AI工具,最新AI工具,AI工具推荐',
+    title: t('meta.title'),
+    description: t('meta.description'),
+    keywords: t('meta.keywords'),
   });
 
-  // 精选工具集合
+  // Featured tools
   const featuredTools = aiTools.filter(t => t.isFeatured).slice(0, 8);
 
-  // 高评分工具
+  // Top rated tools
   const topRatedTools = [...aiTools].sort((a, b) => b.rating - a.rating).slice(0, 8);
 
-  // 最新工具
+  // Latest tools
   const latestTools = [...aiTools].sort((a, b) =>
     new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
   ).slice(0, 8);
 
-  // 热门工具（按访问量）
+  // Popular tools (by visits)
   const popularTools = [...aiTools].sort((a, b) => b.visitCount - a.visitCount).slice(0, 8);
 
   const collections = [
     {
       id: 'featured',
-      title: '编辑精选',
-      description: '由我们精心挑选的优质AI工具',
+      title: t('collections.featured.title'),
+      description: t('collections.featured.description'),
       icon: Sparkles,
       tools: featuredTools,
       color: 'text-brand-orange',
@@ -45,8 +48,8 @@ const Collections: React.FC = () => {
     },
     {
       id: 'top-rated',
-      title: '高分推荐',
-      description: '用户评分最高的AI工具',
+      title: t('collections.topRated.title'),
+      description: t('collections.topRated.description'),
       icon: Star,
       tools: topRatedTools,
       color: 'text-yellow-500',
@@ -54,8 +57,8 @@ const Collections: React.FC = () => {
     },
     {
       id: 'trending',
-      title: '热门工具',
-      description: '访问量最高的AI工具',
+      title: t('collections.trending.title'),
+      description: t('collections.trending.description'),
       icon: TrendingUp,
       tools: popularTools,
       color: 'text-red-500',
@@ -63,8 +66,8 @@ const Collections: React.FC = () => {
     },
     {
       id: 'latest',
-      title: '最新收录',
-      description: '近期新增的AI工具',
+      title: t('collections.latest.title'),
+      description: t('collections.latest.description'),
       icon: Clock,
       tools: latestTools,
       color: 'text-green-500',
@@ -86,12 +89,12 @@ const Collections: React.FC = () => {
               transition={{ duration: 0.5 }}
               className="text-center max-w-3xl mx-auto"
             >
-              <Badge className="mb-4">专题集合</Badge>
+              <Badge className="mb-4">{t('badge')}</Badge>
               <h1 className="text-3xl md:text-4xl font-bold mb-4">
-                精选 AI 工具合集
+                {t('title')}
               </h1>
               <p className="text-muted-foreground">
-                我们根据不同维度为您整理了多个精选合集，帮助您快速发现优质工具
+                {t('subtitle')}
               </p>
             </motion.div>
           </div>
@@ -120,14 +123,14 @@ const Collections: React.FC = () => {
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                  {collection.tools.map((tool, index) => {
+                  {collection.tools.map((tool) => {
                     const category = toolCategories.find(c => c.id === tool.categoryId);
                     return (
                       <motion.div
                         key={tool.id}
                         initial={{ opacity: 0, scale: 0.95 }}
                         animate={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 0.3, delay: index * 0.05 }}
+                        transition={{ duration: 0.3, delay: 0.05 }}
                       >
                         <Card
                           className="cursor-pointer hover:shadow-md transition-shadow h-full"
@@ -181,8 +184,8 @@ const Collections: React.FC = () => {
         <section className="py-12 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="text-center mb-8">
-              <h2 className="text-2xl font-bold mb-2">按分类浏览</h2>
-              <p className="text-muted-foreground">探索不同类别的AI工具</p>
+              <h2 className="text-2xl font-bold mb-2">{t('categories.title')}</h2>
+              <p className="text-muted-foreground">{t('categories.subtitle')}</p>
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
               {toolCategories.map((category) => {
@@ -195,7 +198,7 @@ const Collections: React.FC = () => {
                   >
                     <CardContent className="p-4 text-center">
                       <h3 className="font-medium mb-1">{category.name}</h3>
-                      <p className="text-sm text-muted-foreground">{count} 个工具</p>
+                      <p className="text-sm text-muted-foreground">{count} {t('categories.toolsCount')}</p>
                     </CardContent>
                   </Card>
                 );

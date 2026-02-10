@@ -1,0 +1,37 @@
+{
+  "notFound": {
+    "title": "Tool Not Found",
+    "description": "Sorry, the tool you visited does not exist or has been removed.",
+    "backButton": "Back to Home"
+  },
+  "breadcrumb": {
+    "home": "Home"
+  },
+  "back": "Back",
+  "featured": "Featured",
+  "rating": "Rating",
+  "visits": "visits",
+  "actions": {
+    "visit": "Visit Official Website",
+    "favorite": "Favorite",
+    "share": "Share"
+  },
+  "sections": {
+    "introduction": {
+      "title": "Tool Introduction"
+    },
+    "tags": {
+      "title": "Tags"
+    },
+    "info": {
+      "title": "Tool Information",
+      "category": "Category",
+      "uncategorized": "Uncategorized",
+      "addedDate": "Added Date",
+      "pricing": "Pricing Model"
+    },
+    "related": {
+      "title": "Related Tools"
+    }
+  }
+}

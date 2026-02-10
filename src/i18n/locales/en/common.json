@@ -1,0 +1,28 @@
+{
+  "actions": {
+    "visit": "Visit",
+    "subscribe": "Subscribe",
+    "search": "Search",
+    "submit": "Submit",
+    "reset": "Reset",
+    "clear": "Clear",
+    "back": "Back",
+    "home": "Home",
+    "favorite": "Favorite",
+    "share": "Share"
+  },
+  "pricing": {
+    "free": "Free",
+    "paid": "Paid",
+    "freemium": "Freemium"
+  },
+  "sorting": {
+    "label": "Sort by:",
+    "trending": "🔥 Trending",
+    "newest": "✨ Latest",
+    "rating": "⭐ Top Rated"
+  },
+  "stats": {
+    "toolsCount": "tools"
+  }
+}

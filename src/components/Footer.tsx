@@ -3,8 +3,10 @@ import { Link } from 'react-router-dom';
 import { ROUTE_PATHS } from '@/constants/routes';
 import { SiGithub, SiX, SiFacebook } from 'react-icons/si';
 import { Cpu } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 export const Footer: React.FC = () => {
+  const { t } = useTranslation('footer');
   const currentYear = new Date().getFullYear();
 
   return (
@@ -19,7 +21,7 @@ export const Footer: React.FC = () => {
               <span className="text-xl font-bold tracking-tight">AI<span className="text-brand-blue">Hub</span></span>
             </Link>
             <p className="mb-6 text-sm leading-relaxed text-muted-foreground">
-              全球领先的 AI 工具导航平台，致力于为用户发现最具创新性的智能解决方案。开启您的 AI 探索之旅。
+              {t('tagline')}
             </p>
             <div className="flex items-center gap-4">
               <a href="#" className="transition-colors text-muted-foreground hover:text-foreground" target="_blank" rel="noopener noreferrer">
@@ -35,55 +37,55 @@ export const Footer: React.FC = () => {
           </div>
 
           <div>
-            <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider">产品服务</h3>
+            <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider">{t('sections.products.title')}</h3>
             <ul className="space-y-3">
               <li>
-                <Link to={ROUTE_PATHS.HOME} className="text-sm transition-colors text-muted-foreground hover:text-brand-blue">所有工具</Link>
+                <Link to={ROUTE_PATHS.HOME} className="text-sm transition-colors text-muted-foreground hover:text-brand-blue">{t('sections.products.allTools')}</Link>
               </li>
               <li>
-                <Link to={ROUTE_PATHS.SEARCH} className="text-sm transition-colors text-muted-foreground hover:text-brand-blue">高级搜索</Link>
+                <Link to={ROUTE_PATHS.SEARCH} className="text-sm transition-colors text-muted-foreground hover:text-brand-blue">{t('sections.products.advancedSearch')}</Link>
               </li>
               <li>
-                <Link to={ROUTE_PATHS.COLLECTIONS} className="text-sm transition-colors text-muted-foreground hover:text-brand-blue">精选合集</Link>
+                <Link to={ROUTE_PATHS.COLLECTIONS} className="text-sm transition-colors text-muted-foreground hover:text-brand-blue">{t('sections.products.collections')}</Link>
               </li>
               <li>
-                <Link to={ROUTE_PATHS.SUBMIT} className="text-sm transition-colors text-muted-foreground hover:text-brand-blue">提交工具</Link>
+                <Link to={ROUTE_PATHS.SUBMIT} className="text-sm transition-colors text-muted-foreground hover:text-brand-blue">{t('sections.products.submitTool')}</Link>
               </li>
             </ul>
           </div>
 
           <div>
-            <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider">帮助中心</h3>
+            <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider">{t('sections.help.title')}</h3>
             <ul className="space-y-3">
               <li>
-                <Link to={ROUTE_PATHS.ABOUT} className="text-sm transition-colors text-muted-foreground hover:text-brand-blue">关于我们</Link>
+                <Link to={ROUTE_PATHS.ABOUT} className="text-sm transition-colors text-muted-foreground hover:text-brand-blue">{t('sections.help.aboutUs')}</Link>
               </li>
               <li>
-                <a href="#" className="text-sm transition-colors text-muted-foreground hover:text-brand-blue">使用指南</a>
+                <a href="#" className="text-sm transition-colors text-muted-foreground hover:text-brand-blue">{t('sections.help.userGuide')}</a>
               </li>
               <li>
-                <a href="#" className="text-sm transition-colors text-muted-foreground hover:text-brand-blue">隐私政策</a>
+                <a href="#" className="text-sm transition-colors text-muted-foreground hover:text-brand-blue">{t('sections.help.privacyPolicy')}</a>
               </li>
               <li>
-                <a href="#" className="text-sm transition-colors text-muted-foreground hover:text-brand-blue">服务条款</a>
+                <a href="#" className="text-sm transition-colors text-muted-foreground hover:text-brand-blue">{t('sections.help.termsOfService')}</a>
               </li>
             </ul>
           </div>
 
           <div>
-            <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider">订阅通讯</h3>
-            <p className="mb-4 text-sm text-muted-foreground">获取最新的 AI 工具发布通知和行业动态。</p>
+            <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider">{t('sections.newsletter.title')}</h3>
+            <p className="mb-4 text-sm text-muted-foreground">{t('sections.newsletter.description')}</p>
             <form className="flex gap-2" onSubmit={(e) => e.preventDefault()}>
-              <input 
-                type="email" 
-                placeholder="您的邮箱地址" 
+              <input
+                type="email"
+                placeholder={t('sections.newsletter.placeholder')}
                 className="w-full px-3 py-2 text-sm transition-all border rounded-md bg-muted/50 border-border focus:outline-none focus:ring-1 focus:ring-brand-blue"
               />
-              <button 
-                type="submit" 
+              <button
+                type="submit"
                 className="px-4 py-2 text-sm font-medium text-white transition-colors rounded-md bg-brand-blue hover:bg-brand-blue/90"
               >
-                订阅
+                {t('sections.newsletter.button')}
               </button>
             </form>
           </div>
@@ -91,11 +93,11 @@ export const Footer: React.FC = () => {
 
         <div className="flex flex-col items-center justify-between gap-4 pt-8 mt-12 border-t md:flex-row">
           <p className="text-xs text-muted-foreground">
-            &copy; {currentYear} AI Hub 导航平台. 保留所有权利。
+            {t('copyright', { year: currentYear })}
           </p>
           <div className="flex gap-6">
-            <span className="text-xs text-muted-foreground">Designed for AI Era</span>
-            <span className="text-xs text-muted-foreground">Powered by Next-Gen Tech</span>
+            <span className="text-xs text-muted-foreground">{t('credits.era')}</span>
+            <span className="text-xs text-muted-foreground">{t('credits.powered')}</span>
           </div>
         </div>
       </div>

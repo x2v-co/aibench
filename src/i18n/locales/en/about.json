@@ -1,0 +1,50 @@
+{
+  "meta": {
+    "title": "About Us - AIHub",
+    "description": "AIHub is a professional AI tools navigation platform dedicated to helping users discover the most suitable AI solutions to improve work efficiency and creativity.",
+    "keywords": "About AIHub,AI tools navigation,AI tools platform,artificial intelligence navigation"
+  },
+  "badge": "About Us",
+  "title": "Discover the Infinite Possibilities of AI",
+  "description": "AIHub is a navigation platform focused on curating and recommending high-quality AI tools. Our mission is to help users discover the most suitable artificial intelligence solutions for their needs, enhancing work efficiency and creativity.",
+  "stats": {
+    "aiTools": "AI Tools Listed",
+    "categories": "Tool Categories",
+    "monthlyVisits": "Monthly Visits",
+    "countries": "Countries Covered"
+  },
+  "features": {
+    "title": "Our Features",
+    "subtitle": "Dedicated to providing the best AI tool discovery experience",
+    "list": {
+      "curated": {
+        "title": "Curated Quality Tools",
+        "description": "We carefully select the world's best AI tools to ensure each one brings you value."
+      },
+      "categorized": {
+        "title": "Detailed Categorized Navigation",
+        "description": "Categorized by use case and functionality to help you quickly find the tools you need."
+      },
+      "updated": {
+        "title": "Real-time Updates",
+        "description": "Continuously tracking the latest developments in AI and featuring new quality tools as soon as they emerge."
+      },
+      "reviews": {
+        "title": "User Reviews",
+        "description": "Real user ratings and feedback to help you make smarter choices."
+      }
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "description": "If you have any questions, suggestions, or partnership inquiries, please feel free to contact us.",
+    "email": {
+      "title": "Email Contact",
+      "value": "contact@aihub.com"
+    },
+    "feedback": {
+      "title": "Online Feedback",
+      "value": "Submit tools or suggestions"
+    }
+  }
+}

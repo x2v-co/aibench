@@ -1,0 +1,16 @@
+{
+  "title": "Explorar todas las herramientas",
+  "searchResults": "Resultados de búsqueda",
+  "resetFilters": "Restablecer todos los filtros",
+  "noResults": {
+    "title": "No se encontraron herramientas coincidentes",
+    "description": "Intente ajustar sus palabras clave de búsqueda o seleccionar una categoría diferente para descubrir más recursos de IA emocionantes.",
+    "clearFilters": "Limpiar todos los filtros"
+  },
+  "newsletter": {
+    "title": "Suscríbete a nuestro boletín semanal",
+    "description": "Recibe las últimas actualizaciones de herramientas de IA y análisis profundos de la industria cada semana. Mantente a la vanguardia de la tecnología.",
+    "placeholder": "Introduce tu dirección de correo electrónico",
+    "button": "Suscríbete ahora"
+  }
+}

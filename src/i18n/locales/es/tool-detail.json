@@ -1,0 +1,37 @@
+{
+  "notFound": {
+    "title": "Herramienta no encontrada",
+    "description": "Lo sentimos, la herramienta que visitaste no existe o ha sido eliminada.",
+    "backButton": "Volver al inicio"
+  },
+  "breadcrumb": {
+    "home": "Inicio"
+  },
+  "back": "Atrás",
+  "featured": "Destacado",
+  "rating": "Calificación",
+  "visits": "visitas",
+  "actions": {
+    "visit": "Visitar sitio web",
+    "favorite": "Favorito",
+    "share": "Compartir"
+  },
+  "sections": {
+    "introduction": {
+      "title": "Introducción de la herramienta"
+    },
+    "tags": {
+      "title": "Etiquetas"
+    },
+    "info": {
+      "title": "Información de la herramienta",
+      "category": "Categoría",
+      "uncategorized": "Sin categorizar",
+      "addedDate": "Fecha de adición",
+      "pricing": "Modelo de precios"
+    },
+    "related": {
+      "title": "Herramientas relacionadas"
+    }
+  }
+}

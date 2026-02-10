@@ -1,0 +1,33 @@
+{
+  "meta": {
+    "title": "Sammlungen - Empfohlene KI-Tools",
+    "description": "Entdecken Sie kuratierte KI-Tools-Sammlungen von AIBench, einschließlich Redaktionsempfehlungen, Top-bewertet, Beliebt, Neueste und mehr, um Ihnen zu helfen, schnell Qualitäts-KI-Tools zu entdecken.",
+    "keywords": "KI-Tools-Sammlungen,empfohlene KI-Tools,beliebte KI-tools,neueste KI-Tools,KI-Tools-Empfehlungen"
+  },
+  "badge": "Sammlungen",
+  "title": "Empfohlene KI-Tools-Sammlungen",
+  "subtitle": "Wir haben mehrere kuratierte Sammlungen organisiert, um Ihnen zu helfen, schnell Qualitäts-Tools zu entdecken",
+  "collections": {
+    "featured": {
+      "title": "Redaktionsempfehlungen",
+      "description": "Qualitäts-KI-Tools, sorgfältig von uns ausgewählt"
+    },
+    "topRated": {
+      "title": "Top bewertet",
+      "description": "Am höchsten von Nutzern bewertete KI-Tools"
+    },
+    "trending": {
+      "title": "Beliebt",
+      "description": "Meistbesuchte KI-Tools"
+    },
+    "latest": {
+      "title": "Neueste",
+      "description": "Kürzlich hinzugefügte KI-Tools"
+    }
+  },
+  "categories": {
+    "title": "Nach Kategorie durchsuchen",
+    "subtitle": "Entdecken Sie KI-Tools in verschiedenen Kategorien",
+    "toolsCount": "Tools"
+  }
+}

@@ -1,10 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { aiTools } from '@/data/tools';
+import { useTranslatedTools } from '@/hooks/useTranslatedTools';
 import { ToolCard } from '@/components/ToolCard';
 import { Sparkles } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 export const FeaturedTools: React.FC = () => {
+  const { t } = useTranslation('featured');
+  const { aiTools } = useTranslatedTools();
   const featuredTools = aiTools.filter(tool => tool.isFeatured);
 
   const containerVariants = {
@@ -29,21 +32,21 @@ export const FeaturedTools: React.FC = () => {
           <div className="text-center md:text-left">
             <div className="flex items-center justify-center gap-2 mb-2 md:justify-start">
               <Sparkles className="w-5 h-5 text-brand-orange" />
-              <span className="text-sm font-bold tracking-widest uppercase text-brand-orange">热门精选</span>
+              <span className="text-sm font-bold tracking-widest uppercase text-brand-orange">{t('badge')}</span>
             </div>
-            <h2 className="text-3xl font-bold md:text-4xl">精选人工智能工具</h2>
-            <p className="mt-2 text-muted-foreground">为您挑选当前最前沿、最高效的 AI 生产力工具</p>
+            <h2 className="text-3xl font-bold md:text-4xl">{t('title')}</h2>
+            <p className="mt-2 text-muted-foreground">{t('subtitle')}</p>
           </div>
-          
-          <motion.div 
+
+          <motion.div
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <a 
-              href="#" 
+            <a
+              href="#"
               className="px-6 py-2 text-sm font-medium transition-colors border rounded-full hover:bg-secondary border-border"
             >
-              查看全部工具
+              {t('viewAll')}
             </a>
           </motion.div>
         </div>

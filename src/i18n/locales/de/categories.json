@@ -1,0 +1,45 @@
+{
+  "all": "Alle Tools",
+  "categories": {
+    "1": {
+      "name": "Textschreiben",
+      "description": "KI-Schreibassistenten, Übersetzung und Content-Generierungstools"
+    },
+    "2": {
+      "name": "Bildgenerierung",
+      "description": "KI-Kunst, Bildbearbeitung und visuelle Erstellungstools"
+    },
+    "3": {
+      "name": "Code-Entwicklung",
+      "description": "KI-Codevervollständigung, Fehlerbehebung und Entwicklungseffizienz-Tools"
+    },
+    "4": {
+      "name": "Video-Erstellung",
+      "description": "KI-Video-Generierung, Bearbeitung und digitaler Avatar-Tools"
+    },
+    "5": {
+      "name": "Audio & Sprache",
+      "description": "KI-Sprachausgabe, Musik-Erstellung und Audio-Verarbeitungstools"
+    },
+    "6": {
+      "name": "Produktivität",
+      "description": "KI-Notizen, PPT-Generierung und Zeitplan-Management-Tools"
+    },
+    "7": {
+      "name": "KI-Agenten",
+      "description": "KI-Agenten, intelligente Assistenten und Automatisierungs-Tools"
+    },
+    "8": {
+      "name": "KI-Suche",
+      "description": "KI-Suchmaschinen und intelligente Frage-Antwort-Tools"
+    },
+    "9": {
+      "name": "Entwicklungsplattform",
+      "description": "No-Code/Low-Code KI-Anwendungsentwicklungsplattformen"
+    },
+    "10": {
+      "name": "KI-Design",
+      "description": "KI-Design-Tools und kreative Plattformen"
+    }
+  }
+}

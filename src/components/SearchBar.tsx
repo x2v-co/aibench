@@ -1,14 +1,15 @@
 import React from 'react';
 import { Search, SlidersHorizontal } from 'lucide-react';
 import { Input } from '@/components/ui/input';
-import { 
-  Select, 
-  SelectContent, 
-  SelectItem, 
-  SelectTrigger, 
-  SelectValue 
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue
 } from '@/components/ui/select';
 import { SortOption } from '@/hooks/useToolSearch';
+import { useTranslation } from 'react-i18next';
 
 interface SearchBarProps {
   searchQuery: string;
@@ -25,6 +26,8 @@ export const SearchBar: React.FC<SearchBarProps> = ({
   onSortChange,
   resultCount
 }) => {
+  const { t } = useTranslation('search');
+
   return (
     <div className="glass-panel p-4 rounded-2xl border flex flex-col md:flex-row items-center gap-4">
       <div className="relative flex-1 w-full">
@@ -32,7 +35,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({
         <Input
           value={searchQuery}
           onChange={(e) => onSearchChange(e.target.value)}
-          placeholder="输入名称、描述或标签进行搜索..."
+          placeholder={t('placeholder')}
           className="pl-10 h-12 bg-transparent border-none focus-visible:ring-1 focus-visible:ring-brand-blue text-lg"
         />
       </div>
@@ -40,22 +43,22 @@ export const SearchBar: React.FC<SearchBarProps> = ({
       <div className="flex items-center gap-4 w-full md:w-auto border-t md:border-t-0 md:border-l pt-4 md:pt-0 md:pl-4">
         <div className="flex items-center gap-2 text-sm text-muted-foreground whitespace-nowrap">
           <SlidersHorizontal className="h-4 w-4" />
-          排序：
+          {t('sortLabel')}
         </div>
-        
+
         <Select value={sortBy} onValueChange={(val) => onSortChange(val as SortOption)}>
           <SelectTrigger className="w-[140px] h-10 border-none bg-secondary/50 focus:ring-0">
-            <SelectValue placeholder="排序方式" />
+            <SelectValue placeholder={t('sortPlaceholder')} />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="trending">🔥 热门趋势</SelectItem>
-            <SelectItem value="newest">✨ 最新发布</SelectItem>
-            <SelectItem value="rating">⭐ 评分最高</SelectItem>
+            <SelectItem value="trending">{t('results.trending')}</SelectItem>
+            <SelectItem value="newest">{t('results.newest')}</SelectItem>
+            <SelectItem value="rating">{t('results.rating')}</SelectItem>
           </SelectContent>
         </Select>
 
         <div className="hidden lg:block text-sm text-muted-foreground whitespace-nowrap border-l pl-4">
-          共找到 <span className="font-bold text-foreground">{resultCount}</span> 个工具
+          <span dangerouslySetInnerHTML={{ __html: t('results.found', { count: resultCount }) }} />
         </div>
       </div>
     </div>

@@ -1,0 +1,50 @@
+{
+  "meta": {
+    "title": "Sobre nosotros - AIBench",
+    "description": "AIBench es una plataforma de navegación de herramientas de IA profesional dedicada a ayudar a los usuarios a descubrir las soluciones de IA más adecuadas para mejorar la eficiencia laboral y la creatividad.",
+    "keywords": "Sobre AIBench,navegación de herramientas de IA,plataforma de herramientas de IA,navegación de inteligencia artificial"
+  },
+  "badge": "Sobre nosotros",
+  "title": "Descubre las infinitas posibilidades de la IA",
+  "description": "AIBench es una plataforma de navegación centrada en la curaduría y recomendación de herramientas de IA de alta calidad. Nuestra misión es ayudar a los usuarios a descubrir las soluciones de inteligencia artificial más adecuadas para sus necesidades, mejorando la eficiencia laboral y la creatividad.",
+  "stats": {
+    "aiTools": "Herramientas de IA listadas",
+    "categories": "Categorías de herramientas",
+    "monthlyVisits": "Visitas mensuales",
+    "countries": "Países cubiertos"
+  },
+  "features": {
+    "title": "Nuestras características",
+    "subtitle": "Dedicados a proporcionar la mejor experiencia de descubrimiento de herramientas de IA",
+    "list": {
+      "curated": {
+        "title": "Herramientas de calidad curadas",
+        "description": "Seleccionamos cuidadosamente las mejores herramientas de IA del mundo para garantizar que cada una te aporte valor."
+      },
+      "categorized": {
+        "title": "Navegación categorizada detallada",
+        "description": "Categorizadas por caso de uso y funcionalidad para ayudarte a encontrar rápidamente las herramientas que necesitas."
+      },
+      "updated": {
+        "title": "Actualizaciones en tiempo real",
+        "description": "Rastreamos continuamente los últimos developments en IA y presentamos nuevas herramientas de calidad tan pronto como surgen."
+      },
+      "reviews": {
+        "title": "Reseñas de usuarios",
+        "description": "Calificaciones y comentarios de usuarios reales para ayudarte a tomar decisiones más inteligentes."
+      }
+    }
+  },
+  "contact": {
+    "title": "Contáctanos",
+    "description": "Si tienes alguna pregunta, sugerencia o consulta de colaboración, no dudes en contactarnos.",
+    "email": {
+      "title": "Contacto por correo",
+      "value": "contact@aibench.top"
+    },
+    "feedback": {
+      "title": "Comentarios en línea",
+      "value": "Enviar herramientas o sugerencias"
+    }
+  }
+}

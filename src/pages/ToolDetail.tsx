@@ -5,7 +5,8 @@ import { Footer } from '@/components/Footer';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { aiTools, toolCategories } from '@/data/tools';
+import { toolCategories } from '@/data/tools';
+import { useTranslatedTools } from '@/hooks/useTranslatedTools';
 import { useSEO } from '@/hooks/useSEO';
 import {
   ExternalLink,
@@ -19,10 +20,13 @@ import {
   Heart
 } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 const ToolDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
+  const { t } = useTranslation('toolDetail');
+  const { aiTools, toolCategories } = useTranslatedTools();
 
   const tool = aiTools.find(t => t.id === id);
   const category = tool ? toolCategories.find(c => c.id === tool.categoryId) : null;
@@ -31,9 +35,9 @@ const ToolDetail: React.FC = () => {
     : [];
 
   useSEO(tool ? {
-    title: `${tool.name} - ${category?.name || 'AI工具'}`,
+    title: `${tool.name} - ${category?.name || t('sections.info.uncategorized')}`,
     description: tool.longDescription || tool.description,
-    keywords: `${tool.name},${tool.tags.join(',')},${category?.name || ''},AI工具`,
+    keywords: `${tool.name},${tool.tags.join(',')},${category?.name || ''},AI Tools`,
   } : {});
 
   if (!tool) {
@@ -42,11 +46,11 @@ const ToolDetail: React.FC = () => {
         <Header />
         <main className="flex-grow container mx-auto px-4 py-20">
           <div className="text-center">
-            <h1 className="text-2xl font-bold mb-4">工具未找到</h1>
-            <p className="text-muted-foreground mb-8">抱歉，您访问的工具不存在或已被移除。</p>
+            <h1 className="text-2xl font-bold mb-4">{t('notFound.title')}</h1>
+            <p className="text-muted-foreground mb-8">{t('notFound.description')}</p>
             <Button onClick={() => navigate('/')}>
               <ArrowLeft className="mr-2 h-4 w-4" />
-              返回首页
+              {t('notFound.backButton')}
             </Button>
           </div>
         </main>
@@ -65,10 +69,10 @@ const ToolDetail: React.FC = () => {
           <div className="container mx-auto px-4 py-4">
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
               <button
-                onClick={() => navigate('/')}
+                onClick={() => navigate(-1)}
                 className="hover:text-foreground transition-colors"
               >
-                首页
+                {t('breadcrumb.home')}
               </button>
               <span>/</span>
               {category && (
@@ -101,7 +105,7 @@ const ToolDetail: React.FC = () => {
               className="mb-6"
             >
               <ArrowLeft className="mr-2 h-4 w-4" />
-              返回
+              {t('back')}
             </Button>
 
             <div className="grid md:grid-cols-3 gap-8">
@@ -122,7 +126,7 @@ const ToolDetail: React.FC = () => {
                     <div className="flex items-center gap-3 mb-2">
                       <h1 className="text-2xl md:text-3xl font-bold">{tool.name}</h1>
                       {tool.isFeatured && (
-                        <Badge className="bg-brand-orange text-white">精选</Badge>
+                        <Badge className="bg-brand-orange text-white">{t('featured')}</Badge>
                       )}
                     </div>
                     <p className="text-lg text-muted-foreground mb-4">
@@ -132,15 +136,15 @@ const ToolDetail: React.FC = () => {
                       <div className="flex items-center gap-1">
                         <Star className="h-5 w-5 fill-brand-orange text-brand-orange" />
                         <span className="font-semibold">{tool.rating.toFixed(1)}</span>
-                        <span className="text-muted-foreground text-sm">评分</span>
+                        <span className="text-muted-foreground text-sm">{t('rating')}</span>
                       </div>
                       <div className="flex items-center gap-1 text-muted-foreground">
                         <Eye className="h-5 w-5" />
                         <span>{tool.visitCount.toLocaleString()}</span>
-                        <span className="text-sm">访问</span>
+                        <span className="text-sm">{t('visits')}</span>
                       </div>
                       <Badge variant="secondary" className="text-sm">
-                        {tool.pricing}
+                        {t(`pricing.${tool.pricing.toLowerCase()}`)}
                       </Badge>
                     </div>
                   </div>
@@ -154,22 +158,22 @@ const ToolDetail: React.FC = () => {
                     onClick={() => window.open(tool.websiteUrl, '_blank', 'noopener,noreferrer')}
                   >
                     <ExternalLink className="mr-2 h-5 w-5" />
-                    访问官网
+                    {t('actions.visit')}
                   </Button>
                   <Button variant="outline" size="lg">
                     <Heart className="mr-2 h-5 w-5" />
-                    收藏
+                    {t('actions.favorite')}
                   </Button>
                   <Button variant="outline" size="lg">
                     <Share2 className="mr-2 h-5 w-5" />
-                    分享
+                    {t('actions.share')}
                   </Button>
                 </div>
 
                 {/* Description */}
                 <Card>
                   <CardContent className="p-6">
-                    <h2 className="text-xl font-semibold mb-4">工具介绍</h2>
+                    <h2 className="text-xl font-semibold mb-4">{t('sections.introduction.title')}</h2>
                     <p className="text-muted-foreground leading-relaxed whitespace-pre-line">
                       {tool.longDescription || tool.description}
                     </p>
@@ -181,7 +185,7 @@ const ToolDetail: React.FC = () => {
                   <CardContent className="p-6">
                     <h2 className="text-xl font-semibold mb-4 flex items-center gap-2">
                       <Tag className="h-5 w-5" />
-                      标签
+                      {t('sections.tags.title')}
                     </h2>
                     <div className="flex flex-wrap gap-2">
                       {tool.tags.map((tag) => (
@@ -199,25 +203,25 @@ const ToolDetail: React.FC = () => {
                 {/* Info Card */}
                 <Card>
                   <CardContent className="p-6 space-y-4">
-                    <h3 className="font-semibold text-lg">工具信息</h3>
+                    <h3 className="font-semibold text-lg">{t('sections.info.title')}</h3>
                     <div className="space-y-3 text-sm">
                       <div className="flex items-center justify-between">
                         <span className="text-muted-foreground flex items-center gap-2">
                           <Folder className="h-4 w-4" />
-                          分类
+                          {t('sections.info.category')}
                         </span>
-                        <span className="font-medium">{category?.name || '未分类'}</span>
+                        <span className="font-medium">{category?.name || t('sections.info.uncategorized')}</span>
                       </div>
                       <div className="flex items-center justify-between">
                         <span className="text-muted-foreground flex items-center gap-2">
                           <Calendar className="h-4 w-4" />
-                          收录时间
+                          {t('sections.info.addedDate')}
                         </span>
                         <span className="font-medium">{tool.createdAt}</span>
                       </div>
                       <div className="flex items-center justify-between">
-                        <span className="text-muted-foreground">定价模式</span>
-                        <Badge variant="secondary">{tool.pricing}</Badge>
+                        <span className="text-muted-foreground">{t('sections.info.pricing')}</span>
+                        <Badge variant="secondary">{t(`pricing.${tool.pricing.toLowerCase()}`)}</Badge>
                       </div>
                     </div>
                   </CardContent>
@@ -227,7 +231,7 @@ const ToolDetail: React.FC = () => {
                 {relatedTools.length > 0 && (
                   <Card>
                     <CardContent className="p-6">
-                      <h3 className="font-semibold text-lg mb-4">相关工具</h3>
+                      <h3 className="font-semibold text-lg mb-4">{t('sections.related.title')}</h3>
                       <div className="space-y-3">
                         {relatedTools.map((relatedTool) => (
                           <button

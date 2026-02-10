@@ -1,0 +1,28 @@
+{
+  "actions": {
+    "visit": "访问",
+    "subscribe": "订阅",
+    "search": "搜索",
+    "submit": "提交",
+    "reset": "重置",
+    "clear": "清除",
+    "back": "返回",
+    "home": "首页",
+    "favorite": "收藏",
+    "share": "分享"
+  },
+  "pricing": {
+    "free": "免费",
+    "paid": "付费",
+    "freemium": "免费增值"
+  },
+  "sorting": {
+    "label": "排序：",
+    "trending": "🔥 热门趋势",
+    "newest": "✨ 最新发布",
+    "rating": "⭐ 评分最高"
+  },
+  "stats": {
+    "toolsCount": "个工具"
+  }
+}

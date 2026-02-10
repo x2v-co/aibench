@@ -1,0 +1,50 @@
+{
+  "meta": {
+    "title": "Über uns - AIBench",
+    "description": "AIBench ist eine professionelle KI-Tools-Navigationsplattform, die Benutzern hilft, die am besten geeigneten KI-Lösungen zu entdecken, um die Arbeitseffizienz und Kreativität zu verbessern.",
+    "keywords": "Über AIBench,KI-Tools-Navigation,KI-Tools-Plattform,Künstliche Intelligenz-Navigation"
+  },
+  "badge": "Über uns",
+  "title": "Entdecken Sie die unendlichen Möglichkeiten der KI",
+  "description": "AIBench ist eine Navigationsplattform, die sich auf Kuratierung und Empfehlung hochwertiger KI-Tools konzentriert. Unsere Mission ist es, Benutzern zu helfen, die am besten geeigneten KI-Lösungen für ihre Bedürfnisse zu entdecken und die Arbeitseffizienz und Kreativität zu steigern.",
+  "stats": {
+    "aiTools": "KI-Tools gelistet",
+    "categories": "Tool-Kategorien",
+    "monthlyVisits": "Monatliche Besuche",
+    "countries": "Abgedeckte Länder"
+  },
+  "features": {
+    "title": "Unsere Funktionen",
+    "subtitle": "Engagiert, die beste KI-Tool-Entdeckungserfahrung zu bieten",
+    "list": {
+      "curated": {
+        "title": "Kuratierte Qualitäts-Tools",
+        "description": "Wir wählen sorgfältig die besten KI-Tools der Welt aus, um sicherzustellen, dass jeder Ihnen einen Mehrwert bietet."
+      },
+      "categorized": {
+        "title": "Detaillierte kategorisierte Navigation",
+        "description": "Nach Anwendungsfall und Funktionalität kategorisiert, um Ihnen zu helfen, die benötigten Tools schnell zu finden."
+      },
+      "updated": {
+        "title": "Echtzeit-Updates",
+        "description": "Verfolgt kontinuierlich die neuesten Entwicklungen in der KI und stellt neue Qualitäts-Tools vor, sobald sie auftauchen."
+      },
+      "reviews": {
+        "title": "Nutzerbewertungen",
+        "description": "Echte Nutzerbewertungen und Feedback, die Ihnen helfen, klügere Entscheidungen zu treffen."
+      }
+    }
+  },
+  "contact": {
+    "title": "Kontaktieren Sie uns",
+    "description": "Wenn Sie Fragen, Vorschläge oder Partnerschaftsanfragen haben, zögern Sie bitte nicht, uns zu kontaktieren.",
+    "email": {
+      "title": "E-Mail-Kontakt",
+      "value": "contact@aibench.top"
+    },
+    "feedback": {
+      "title": "Online-Feedback",
+      "value": "Tools einreichen oder Vorschläge machen"
+    }
+  }
+}

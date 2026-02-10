@@ -1,0 +1,30 @@
+{
+  "tagline": "世界をリードするAIツールナビゲーションプラットフォームで、最も革新的なインテリジェントソリューションを発見してください。AI発見の旅を始めましょう。",
+  "sections": {
+    "products": {
+      "title": "製品・サービス",
+      "allTools": "すべてのツール",
+      "advancedSearch": "高度な検索",
+      "collections": "注目コレクション",
+      "submitTool": "ツールを送信"
+    },
+    "help": {
+      "title": "ヘルプセンター",
+      "aboutUs": "私たちについて",
+      "userGuide": "ユーザーガイド",
+      "privacyPolicy": "プライバシーポリシー",
+      "termsOfService": "利用規約"
+    },
+    "newsletter": {
+      "title": "ニュースレター",
+      "description": "最新のAIツールリリース通知と業界アップデートを受け取りましょう。",
+      "placeholder": "あなたのメールアドレス",
+      "button": "購読"
+    }
+  },
+  "copyright": "© {{year}} AIBenchナビゲーションプラットフォーム。すべての権利予約済み。",
+  "credits": {
+    "era": "AI時代向けに設計",
+    "powered": "Next-Genテック駆動"
+  }
+}

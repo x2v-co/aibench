@@ -1,0 +1,33 @@
+{
+  "meta": {
+    "title": "コレクション - 注目のAIツール",
+    "description": "AIBenchの厳選されたAIツールコレクションを探索してください。編集部のおすすめ、高評価、トレンド、最新など、高品質なAIツールを素早く発見するのに役立ちます。",
+    "keywords": "AIツールコレクション,注目AIツール,トレンドAIツール,最新AIツール,AIツール推奨"
+  },
+  "badge": "コレクション",
+  "title": "注目のAIツールコレクション",
+  "subtitle": "高品質なツールを素早く発見できるよう、複数の厳選されたコレクションを整理しました",
+  "collections": {
+    "featured": {
+      "title": "編集部のおすすめ",
+      "description": "私たちが厳選した高品質なAIツール"
+    },
+    "topRated": {
+      "title": "高評価",
+      "description": "ユーザー評価が最も高いAIツール"
+    },
+    "trending": {
+      "title": "トレンド",
+      "description": "最も訪問されたAIツール"
+    },
+    "latest": {
+      "title": "最新",
+      "description": "最近追加されたAIツール"
+    }
+  },
+  "categories": {
+    "title": "カテゴリ別に閲覧",
+    "subtitle": "さまざまなカテゴリのAIツールを探索",
+    "toolsCount": "ツール"
+  }
+}

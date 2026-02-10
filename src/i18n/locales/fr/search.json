@@ -1,0 +1,11 @@
+{
+  "placeholder": "Entrez nom, description ou étiquettes pour rechercher...",
+  "sortLabel": "Trier par:",
+  "sortPlaceholder": "Trier par",
+  "results": {
+    "trending": "🔥 Tendances",
+    "newest": "✨ Plus récents",
+    "rating": "⭐ Mieux notés",
+    "found": "<span>{{count}}</span> outils trouvés au total"
+  }
+}

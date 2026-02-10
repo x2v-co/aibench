@@ -1,0 +1,28 @@
+{
+  "actions": {
+    "visit": "방문",
+    "subscribe": "구독",
+    "search": "검색",
+    "submit": "제출",
+    "reset": "재설정",
+    "clear": "지우기",
+    "back": "뒤로",
+    "home": "홈",
+    "favorite": "즐겨찾기",
+    "share": "공유"
+  },
+  "pricing": {
+    "free": "무료",
+    "paid": "유료",
+    "freemium": "프리미엄"
+  },
+  "sorting": {
+    "label": "정렬:",
+    "trending": "🔥 인기",
+    "newest": "✨ 최신",
+    "rating": "⭐ 최고 평점"
+  },
+  "stats": {
+    "toolsCount": "도구"
+  }
+}

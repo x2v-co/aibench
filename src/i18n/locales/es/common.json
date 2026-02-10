@@ -1,0 +1,28 @@
+{
+  "actions": {
+    "visit": "Visitar",
+    "subscribe": "Suscribirse",
+    "search": "Buscar",
+    "submit": "Enviar",
+    "reset": "Restablecer",
+    "clear": "Limpiar",
+    "back": "Atrás",
+    "home": "Inicio",
+    "favorite": "Favorito",
+    "share": "Compartir"
+  },
+  "pricing": {
+    "free": "Gratis",
+    "paid": "De pago",
+    "freemium": "Freemium"
+  },
+  "sorting": {
+    "label": "Ordenar por:",
+    "trending": "🔥 Tendencias",
+    "newest": "✨ Más recientes",
+    "rating": "⭐ Mejor valorados"
+  },
+  "stats": {
+    "toolsCount": "herramientas"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "meta": {
+    "title": "Collections - Outils IA en vedette",
+    "description": "Explorez les collections d'outils IA sélectionnées par AIBench, y compris les sélections de l'éditeur, les mieux notés, les tendances, les derniers et plus, pour vous aider à découvrir rapidement des outils IA de qualité.",
+    "keywords": "collections d'outils IA,outils IA en vedette,outils IA en tendance,derniers outils IA,recommandations d'outils IA"
+  },
+  "badge": "Collections",
+  "title": "Collections d'outils IA en vedette",
+  "subtitle": "Nous avons organisé plusieurs collections sélectionnées selon différentes dimensions pour vous aider à découvrir rapidement des outils de qualité",
+  "collections": {
+    "featured": {
+      "title": "Sélections de l'éditeur",
+      "description": "Outils IA de qualité soigneusement sélectionnés par nous"
+    },
+    "topRated": {
+      "title": "Mieux notés",
+      "description": "Outils IA les mieux notés par les utilisateurs"
+    },
+    "trending": {
+      "title": "Tendances",
+      "description": "Outils IA les plus visités"
+    },
+    "latest": {
+      "title": "Derniers ajouts",
+      "description": "Outils IA récemment ajoutés"
+    }
+  },
+  "categories": {
+    "title": "Parcourir par catégorie",
+    "subtitle": "Découvrez des outils IA dans différentes catégories",
+    "toolsCount": "outils"
+  }
+}

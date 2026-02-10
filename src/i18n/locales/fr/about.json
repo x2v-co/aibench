@@ -1,0 +1,50 @@
+{
+  "meta": {
+    "title": "À propos de nous - AIBench",
+    "description": "AIBench est une plateforme de navigation d'outils IA professionnelle dédiée à aider les utilisateurs à découvrir les solutions IA les plus appropriées pour améliorer l'efficacité au travail et la créativité.",
+    "keywords": "À propos d'AIBench,navigation d'outils IA,plateforme d'outils IA,navigation intelligence artificielle"
+  },
+  "badge": "À propos de nous",
+  "title": "Découvrez les possibilités infinies de l'IA",
+  "description": "AIBench est une plateforme de navigation axée sur la curation et la recommandation d'outils IA de haute qualité. Notre mission est d'aider les utilisateurs à découvrir les solutions d'intelligence artificielle les plus adaptées à leurs besoins, améliorant l'efficacité au travail et la créativité.",
+  "stats": {
+    "aiTools": "Outils IA répertoriés",
+    "categories": "Catégories d'outils",
+    "monthlyVisits": "Visites mensuelles",
+    "countries": "Pays couverts"
+  },
+  "features": {
+    "title": "Nos fonctionnalités",
+    "subtitle": "Engagés à fournir la meilleure expérience de découverte d'outils IA",
+    "list": {
+      "curated": {
+        "title": "Outils de qualité sélectionnés",
+        "description": "Nous sélectionnons soigneusement les meilleurs outils IA du monde pour garantir que chacun vous apporte de la valeur."
+      },
+      "categorized": {
+        "title": "Navigation catégorisée détaillée",
+        "description": "Catégorisés par cas d'usage et fonctionnalité pour vous aider à trouver rapidement les outils dont vous avez besoin."
+      },
+      "updated": {
+        "title": "Mises à jour en temps réel",
+        "description": "Suivi continu des derniers développements en IA et présentation des nouveaux outils de qualité dès leur apparition."
+      },
+      "reviews": {
+        "title": "Avis utilisateurs",
+        "description": "Notes et commentaires de vrais utilisateurs pour vous aider à faire des choix plus intelligents."
+      }
+    }
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "description": "Si vous avez des questions, des suggestions ou des demandes de partenariat, n'hésitez pas à nous contacter.",
+    "email": {
+      "title": "Contact par e-mail",
+      "value": "contact@aibench.top"
+    },
+    "feedback": {
+      "title": "Commentaires en ligne",
+      "value": "Soumettre des outils ou des suggestions"
+    }
+  }
+}

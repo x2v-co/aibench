@@ -4,14 +4,18 @@ import { aiTools } from '@/data/tools';
 
 export type SortOption = 'trending' | 'newest' | 'rating';
 
-export const useToolSearch = () => {
+interface UseToolSearchOptions {
+  tools?: AITool[];
+}
+
+export const useToolSearch = ({ tools = aiTools }: UseToolSearchOptions = {}) => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategoryId, setSelectedCategoryId] = useState<string | null>(null);
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [sortBy, setSortBy] = useState<SortOption>('trending');
 
   const filteredTools = useMemo(() => {
-    let result = [...aiTools];
+    let result = [...tools];
 
     // Search Query Filter
     if (searchQuery.trim()) {
@@ -51,7 +55,7 @@ export const useToolSearch = () => {
     });
 
     return result;
-  }, [searchQuery, selectedCategoryId, selectedTags, sortBy]);
+  }, [searchQuery, selectedCategoryId, selectedTags, sortBy, tools]);
 
   const toggleTag = useCallback((tag: string) => {
     setSelectedTags((prev) =>

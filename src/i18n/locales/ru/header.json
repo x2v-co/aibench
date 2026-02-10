@@ -1,0 +1,13 @@
+{
+  "navigation": {
+    "home": "Главная",
+    "collections": "Коллекции",
+    "about": "О нас"
+  },
+  "search": {
+    "placeholder": "Поиск ИИ-инструментов..."
+  },
+  "submit": {
+    "button": "Отправить инструмент"
+  }
+}

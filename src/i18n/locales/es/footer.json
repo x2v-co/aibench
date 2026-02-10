@@ -1,0 +1,30 @@
+{
+  "tagline": "La plataforma de navegación de herramientas de IA líder mundial, dedicada a ayudar a los usuarios a descubrir las soluciones inteligentes más innovadoras. Comienza tu viaje de descubrimiento de IA.",
+  "sections": {
+    "products": {
+      "title": "Productos y servicios",
+      "allTools": "Todas las herramientas",
+      "advancedSearch": "Búsqueda avanzada",
+      "collections": "Colecciones destacadas",
+      "submitTool": "Enviar herramienta"
+    },
+    "help": {
+      "title": "Centro de ayuda",
+      "aboutUs": "Sobre nosotros",
+      "userGuide": "Guía del usuario",
+      "privacyPolicy": "Política de privacidad",
+      "termsOfService": "Términos de servicio"
+    },
+    "newsletter": {
+      "title": "Boletín",
+      "description": "Recibe las últimas notificaciones de lanzamiento de herramientas de IA y actualizaciones de la industria.",
+      "placeholder": "Tu dirección de correo electrónico",
+      "button": "Suscribirse"
+    }
+  },
+  "copyright": "© {{year}} Plataforma de navegación AIBench. Todos los derechos reservados.",
+  "credits": {
+    "era": "Diseñado para la era de la IA",
+    "powered": "Impulsado por tecnología de próxima generación"
+  }
+}

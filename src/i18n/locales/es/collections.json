@@ -1,0 +1,33 @@
+{
+  "meta": {
+    "title": "Colecciones - Herramientas de IA destacadas",
+    "description": "Explora colecciones curadas de herramientas de IA de AIBench, incluidas selecciones del editor, mejor valoradas, tendencias, las últimas y más, para ayudarte a descubrir rápidamente herramientas de IA de calidad.",
+    "keywords": "colecciones de herramientas de IA,herramientas de IA destacadas,herramientas de IA en tendencias,últimas herramientas de IA,recomendaciones de herramientas de IA"
+  },
+  "badge": "Colecciones",
+  "title": "Colecciones de herramientas de IA destacadas",
+  "subtitle": "Hemos organizado múltiples colecciones curadas en diferentes dimensiones para ayudarte a descubrir rápidamente herramientas de calidad",
+  "collections": {
+    "featured": {
+      "title": "Selecciones del editor",
+      "description": "Herramientas de IA de calidad cuidadosamente seleccionadas por nosotros"
+    },
+    "topRated": {
+      "title": "Mejor valoradas",
+      "description": "Herramientas de IA mejor calificadas por usuarios"
+    },
+    "trending": {
+      "title": "Tendencias",
+      "description": "Herramientas de IA más visitadas"
+    },
+    "latest": {
+      "title": "Últimas agregadas",
+      "description": "Herramientas de IA recientemente agregadas"
+    }
+  },
+  "categories": {
+    "title": "Explorar por categoría",
+    "subtitle": "Descubre herramientas de IA en diferentes categorías",
+    "toolsCount": "herramientas"
+  }
+}

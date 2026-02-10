@@ -1,0 +1,30 @@
+{
+  "tagline": "全球领先的 AI 工具导航平台，致力于为用户发现最具创新性的智能解决方案。开启您的 AI 探索之旅。",
+  "sections": {
+    "products": {
+      "title": "产品服务",
+      "allTools": "所有工具",
+      "advancedSearch": "高级搜索",
+      "collections": "精选合集",
+      "submitTool": "提交工具"
+    },
+    "help": {
+      "title": "帮助中心",
+      "aboutUs": "关于我们",
+      "userGuide": "使用指南",
+      "privacyPolicy": "隐私政策",
+      "termsOfService": "服务条款"
+    },
+    "newsletter": {
+      "title": "订阅通讯",
+      "description": "获取最新的 AI 工具发布通知和行业动态。",
+      "placeholder": "您的邮箱地址",
+      "button": "订阅"
+    }
+  },
+  "copyright": "© {{year}} AI Hub 导航平台. 保留所有权利。",
+  "credits": {
+    "era": "Designed for AI Era",
+    "powered": "Powered by Next-Gen Tech"
+  }
+}

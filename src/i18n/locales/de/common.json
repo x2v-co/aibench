@@ -1,0 +1,28 @@
+{
+  "actions": {
+    "visit": "Besuchen",
+    "subscribe": "Abonnieren",
+    "search": "Suchen",
+    "submit": "Einreichen",
+    "reset": "Zurücksetzen",
+    "clear": "Löschen",
+    "back": "Zurück",
+    "home": "Startseite",
+    "favorite": "Favorit",
+    "share": "Teilen"
+  },
+  "pricing": {
+    "free": "Kostenlos",
+    "paid": "Kostenpflichtig",
+    "freemium": "Freemium"
+  },
+  "sorting": {
+    "label": "Sortieren nach:",
+    "trending": "🔥 Beliebt",
+    "newest": "✨ Neueste",
+    "rating": "⭐ Top bewertet"
+  },
+  "stats": {
+    "toolsCount": "Tools"
+  }
+}

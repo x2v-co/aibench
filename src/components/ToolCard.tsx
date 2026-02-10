@@ -6,6 +6,7 @@ import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 interface ToolCardProps {
   tool: AITool;
@@ -13,6 +14,7 @@ interface ToolCardProps {
 
 export const ToolCard: React.FC<ToolCardProps> = ({ tool }) => {
   const navigate = useNavigate();
+  const { t } = useTranslation('common');
 
   const handleCardClick = () => {
     navigate(`/tool/${tool.id}`);
@@ -43,7 +45,7 @@ export const ToolCard: React.FC<ToolCardProps> = ({ tool }) => {
               />
             </div>
             <Badge variant="secondary" className="bg-secondary/50 font-medium">
-              {tool.pricing}
+              {t(`pricing.${tool.pricing.toLowerCase()}`)}
             </Badge>
           </div>
           <div>
@@ -93,7 +95,7 @@ export const ToolCard: React.FC<ToolCardProps> = ({ tool }) => {
             }}
           >
             <ExternalLink className="h-4 w-4 mr-1" />
-            访问
+            {t('actions.visit')}
           </Button>
         </CardFooter>
       </Card>

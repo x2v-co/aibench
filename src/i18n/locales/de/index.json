@@ -1,0 +1,16 @@
+{
+  "title": "Alle Tools erkunden",
+  "searchResults": "Suchergebnisse",
+  "resetFilters": "Alle Filter zurücksetzen",
+  "noResults": {
+    "title": "Keine passenden Tools gefunden",
+    "description": "Versuchen Sie, Ihre Suchbegriffe anzupassen oder eine andere Kategorie zu wählen, um mehr spannende KI-Ressourcen zu entdecken.",
+    "clearFilters": "Alle Filter löschen"
+  },
+  "newsletter": {
+    "title": "Abonnieren Sie unseren wöchentlichen Newsletter",
+    "description": "Erhalten Sie die neuesten KI-Tool-Updates und tiefgehende Branchenanalysen jede Woche. Bleiben Sie an der Spitze der Technologie.",
+    "placeholder": "Geben Sie Ihre E-Mail-Adresse ein",
+    "button": "Jetzt abonnieren"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "notFound": {
+    "title": "도구를 찾을 수 없습니다",
+    "description": "죄송합니다. 방문한 도구가 존재하지 않거나 삭제되었습니다.",
+    "backButton": "홈으로 돌아가기"
+  },
+  "breadcrumb": {
+    "home": "홈"
+  },
+  "back": "뒤로",
+  "featured": "추천",
+  "rating": "평점",
+  "visits": "방문",
+  "actions": {
+    "visit": "웹사이트 방문",
+    "favorite": "즐겨찾기",
+    "share": "공유"
+  },
+  "sections": {
+    "introduction": {
+      "title": "도구 소개"
+    },
+    "tags": {
+      "title": "태그"
+    },
+    "info": {
+      "title": "도구 정보",
+      "category": "카테고리",
+      "uncategorized": "분류되지 않음",
+      "addedDate": "추가 날짜",
+      "pricing": "가격 모델"
+    },
+    "related": {
+      "title": "관련 도구"
+    }
+  }
+}

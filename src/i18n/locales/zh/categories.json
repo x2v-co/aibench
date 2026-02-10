@@ -1,0 +1,45 @@
+{
+  "all": "全部工具",
+  "categories": {
+    "1": {
+      "name": "文本写作",
+      "description": "AI 写作助手、翻译及内容生成工具"
+    },
+    "2": {
+      "name": "图像生成",
+      "description": "AI 绘画、图像编辑及视觉创作工具"
+    },
+    "3": {
+      "name": "编程开发",
+      "description": "AI 代码补全、Bug 修复及开发效率工具"
+    },
+    "4": {
+      "name": "视频创作",
+      "description": "AI 视频生成、剪辑及数字人工具"
+    },
+    "5": {
+      "name": "音频音效",
+      "description": "AI 配音、音乐创作及音频处理工具"
+    },
+    "6": {
+      "name": "办公效率",
+      "description": "AI 笔记、PPT 生成及日程管理工具"
+    },
+    "7": {
+      "name": "AI智能体",
+      "description": "AI Agent、智能助手及自动化工具"
+    },
+    "8": {
+      "name": "AI搜索",
+      "description": "AI 搜索引擎及智能问答工具"
+    },
+    "9": {
+      "name": "开发平台",
+      "description": "无代码/低代码 AI 应用开发平台"
+    },
+    "10": {
+      "name": "AI设计",
+      "description": "AI 设计工具及创意平台"
+    }
+  }
+}

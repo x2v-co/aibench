@@ -1,0 +1,37 @@
+{
+  "notFound": {
+    "title": "Outil non trouvé",
+    "description": "Désolé, l'outil que vous avez visité n'existe pas ou a été supprimé.",
+    "backButton": "Retour à l'accueil"
+  },
+  "breadcrumb": {
+    "home": "Accueil"
+  },
+  "back": "Retour",
+  "featured": "En vedette",
+  "rating": "Note",
+  "visits": "visites",
+  "actions": {
+    "visit": "Visiter le site web",
+    "favorite": "Favori",
+    "share": "Partager"
+  },
+  "sections": {
+    "introduction": {
+      "title": "Présentation de l'outil"
+    },
+    "tags": {
+      "title": "Étiquettes"
+    },
+    "info": {
+      "title": "Informations sur l'outil",
+      "category": "Catégorie",
+      "uncategorized": "Non catégorisé",
+      "addedDate": "Date d'ajout",
+      "pricing": "Modèle de prix"
+    },
+    "related": {
+      "title": "Outils associés"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "tagline": "The world's leading AI tools navigation platform, dedicated to helping users discover the most innovative intelligent solutions. Start your AI exploration journey.",
+  "sections": {
+    "products": {
+      "title": "Products & Services",
+      "allTools": "All Tools",
+      "advancedSearch": "Advanced Search",
+      "collections": "Featured Collections",
+      "submitTool": "Submit Tool"
+    },
+    "help": {
+      "title": "Help Center",
+      "aboutUs": "About Us",
+      "userGuide": "User Guide",
+      "privacyPolicy": "Privacy Policy",
+      "termsOfService": "Terms of Service"
+    },
+    "newsletter": {
+      "title": "Newsletter",
+      "description": "Get the latest AI tool release notifications and industry updates.",
+      "placeholder": "Your email address",
+      "button": "Subscribe"
+    }
+  },
+  "copyright": "© {{year}} AI Hub Navigation Platform. All rights reserved.",
+  "credits": {
+    "era": "Designed for AI Era",
+    "powered": "Powered by Next-Gen Tech"
+  }
+}

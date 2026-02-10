@@ -1,0 +1,33 @@
+{
+  "meta": {
+    "title": "专题集合 - 精选AI工具合集",
+    "description": "探索AIHub精心整理的AI工具合集，包括编辑精选、高分推荐、热门工具、最新收录等多个专题，帮助您快速发现优质AI工具。",
+    "keywords": "AI工具合集,精选AI工具,热门AI工具,最新AI工具,AI工具推荐"
+  },
+  "badge": "专题集合",
+  "title": "精选 AI 工具合集",
+  "subtitle": "我们根据不同维度为您整理了多个精选合集，帮助您快速发现优质工具",
+  "collections": {
+    "featured": {
+      "title": "编辑精选",
+      "description": "由我们精心挑选的优质AI工具"
+    },
+    "topRated": {
+      "title": "高分推荐",
+      "description": "用户评分最高的AI工具"
+    },
+    "trending": {
+      "title": "热门工具",
+      "description": "访问量最高的AI工具"
+    },
+    "latest": {
+      "title": "最新收录",
+      "description": "近期新增的AI工具"
+    }
+  },
+  "categories": {
+    "title": "按分类浏览",
+    "subtitle": "探索不同类别的AI工具",
+    "toolsCount": "个工具"
+  }
+}

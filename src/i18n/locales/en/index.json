@@ -1,0 +1,16 @@
+{
+  "title": "Explore All Tools",
+  "searchResults": "Search Results",
+  "resetFilters": "Reset All Filters",
+  "noResults": {
+    "title": "No Matching Tools Found",
+    "description": "Try adjusting your search keywords or selecting a different category to discover more exciting AI resources.",
+    "clearFilters": "Clear All Filters"
+  },
+  "newsletter": {
+    "title": "Subscribe to Our Weekly Newsletter",
+    "description": "Get the latest AI tool updates and in-depth industry analysis every week. Stay at the forefront of technology.",
+    "placeholder": "Enter your email address",
+    "button": "Subscribe Now"
+  }
+}

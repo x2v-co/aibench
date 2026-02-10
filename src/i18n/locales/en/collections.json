@@ -1,0 +1,33 @@
+{
+  "meta": {
+    "title": "Collections - Featured AI Tools",
+    "description": "Explore curated AI tool collections from AIHub, including Editor's Picks, Top Rated, Trending, Latest, and more to help you quickly discover quality AI tools.",
+    "keywords": "AI tools collections,featured AI tools,trending AI tools,latest AI tools,AI tools recommendations"
+  },
+  "badge": "Collections",
+  "title": "Featured AI Tools Collections",
+  "subtitle": "We've organized multiple curated collections across different dimensions to help you quickly discover quality tools",
+  "collections": {
+    "featured": {
+      "title": "Editor's Picks",
+      "description": "Quality AI tools carefully selected by us"
+    },
+    "topRated": {
+      "title": "Top Rated",
+      "description": "Highest user-rated AI tools"
+    },
+    "trending": {
+      "title": "Trending",
+      "description": "Most visited AI tools"
+    },
+    "latest": {
+      "title": "Latest Added",
+      "description": "Recently added AI tools"
+    }
+  },
+  "categories": {
+    "title": "Browse by Category",
+    "subtitle": "Explore AI tools in different categories",
+    "toolsCount": "tools"
+  }
+}

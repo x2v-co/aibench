@@ -1,0 +1,11 @@
+{
+  "placeholder": "Enter name, description, or tags to search...",
+  "sortLabel": "Sort by:",
+  "sortPlaceholder": "Sort by",
+  "results": {
+    "trending": "🔥 Trending",
+    "newest": "✨ Latest",
+    "rating": "⭐ Highest Rated",
+    "found": "Found <span>{{count}}</span> tools total"
+  }
+}

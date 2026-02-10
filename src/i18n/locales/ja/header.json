@@ -1,0 +1,13 @@
+{
+  "navigation": {
+    "home": "ホーム",
+    "collections": "コレクション",
+    "about": "私たちについて"
+  },
+  "search": {
+    "placeholder": "AIツールを検索..."
+  },
+  "submit": {
+    "button": "ツールを送信"
+  }
+}

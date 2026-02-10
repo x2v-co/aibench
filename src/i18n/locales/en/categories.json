@@ -1,0 +1,45 @@
+{
+  "all": "All Tools",
+  "categories": {
+    "1": {
+      "name": "Text Writing",
+      "description": "AI writing assistants, translation, and content generation tools"
+    },
+    "2": {
+      "name": "Image Generation",
+      "description": "AI art, image editing, and visual creation tools"
+    },
+    "3": {
+      "name": "Coding Development",
+      "description": "AI code completion, bug fixing, and development efficiency tools"
+    },
+    "4": {
+      "name": "Video Creation",
+      "description": "AI video generation, editing, and digital avatar tools"
+    },
+    "5": {
+      "name": "Audio & Speech",
+      "description": "AI voiceover, music creation, and audio processing tools"
+    },
+    "6": {
+      "name": "Productivity",
+      "description": "AI notes, PPT generation, and schedule management tools"
+    },
+    "7": {
+      "name": "AI Agents",
+      "description": "AI Agents, intelligent assistants, and automation tools"
+    },
+    "8": {
+      "name": "AI Search",
+      "description": "AI search engines and intelligent Q&A tools"
+    },
+    "9": {
+      "name": "Development Platform",
+      "description": "No-code/Low-code AI application development platforms"
+    },
+    "10": {
+      "name": "AI Design",
+      "description": "AI design tools and creative platforms"
+    }
+  }
+}

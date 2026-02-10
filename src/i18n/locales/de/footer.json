@@ -1,0 +1,30 @@
+{
+  "tagline": "Die weltweit führende KI-Tools-Navigationsplattform, die Benutzern hilft, die innovativsten intelligenten Lösungen zu entdecken. Starten Sie Ihre KI-Entdeckungsreise.",
+  "sections": {
+    "products": {
+      "title": "Produkte & Services",
+      "allTools": "Alle Tools",
+      "advancedSearch": "Erweiterte Suche",
+      "collections": "Empfohlene Sammlungen",
+      "submitTool": "Tool einreichen"
+    },
+    "help": {
+      "title": "Hilfe-Center",
+      "aboutUs": "Über uns",
+      "userGuide": "Benutzerhandbuch",
+      "privacyPolicy": "Datenschutzrichtlinie",
+      "termsOfService": "Nutzungsbedingungen"
+    },
+    "newsletter": {
+      "title": "Newsletter",
+      "description": "Erhalten Sie die neuesten KI-Tool-Veröffentlichungsbenachrichtigungen und Branchen-Updates.",
+      "placeholder": "Ihre E-Mail-Adresse",
+      "button": "Abonnieren"
+    }
+  },
+  "copyright": "© {{year}} AIBench Navigationsplattform. Alle Rechte vorbehalten.",
+  "credits": {
+    "era": "Entwickelt für das KI-Zeitalter",
+    "powered": "Angetrieben von Next-Gen-Tech"
+  }
+}

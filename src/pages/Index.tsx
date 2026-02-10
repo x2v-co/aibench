@@ -7,11 +7,15 @@ import { SearchBar } from '@/components/SearchBar';
 import { ToolCard } from '@/components/ToolCard';
 import { Footer } from '@/components/Footer';
 import { useToolSearch } from '@/hooks/useToolSearch';
+import { useTranslatedTools } from '@/hooks/useTranslatedTools';
 import { useSEO } from '@/hooks/useSEO';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 const Index: React.FC = () => {
   useSEO();
+  const { t } = useTranslation('index');
+  const { aiTools } = useTranslatedTools();
 
   const {
     searchQuery,
@@ -22,7 +26,7 @@ const Index: React.FC = () => {
     setSortBy,
     filteredTools,
     resetFilters
-  } = useToolSearch();
+  } = useToolSearch({ tools: aiTools });
 
   const hasActiveFilters = searchQuery.length > 0 || selectedCategoryId !== null;
 
@@ -48,14 +52,14 @@ const Index: React.FC = () => {
             <div className="space-y-6">
               <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
                 <h2 className="text-2xl font-bold tracking-tight">
-                  {hasActiveFilters ? '搜索结果' : '探索所有工具'}
+                  {hasActiveFilters ? t('searchResults') : t('title')}
                 </h2>
                 {hasActiveFilters && (
                   <button
                     onClick={resetFilters}
                     className="text-sm font-medium text-brand-blue hover:underline transition-all"
                   >
-                    重置所有筛选
+                    {t('resetFilters')}
                   </button>
                 )}
               </div>
@@ -105,15 +109,15 @@ const Index: React.FC = () => {
                     <div className="w-16 h-16 mb-4 rounded-full bg-muted flex items-center justify-center">
                       <span className="text-2xl">🔍</span>
                     </div>
-                    <h3 className="text-xl font-semibold mb-2">未找到匹配的工具</h3>
+                    <h3 className="text-xl font-semibold mb-2">{t('noResults.title')}</h3>
                     <p className="text-muted-foreground max-w-md">
-                      尝试调整您的搜索关键词或选择不同的分类，发现更多精彩的 AI 资源。
+                      {t('noResults.description')}
                     </p>
                     <button
                       onClick={resetFilters}
                       className="mt-6 px-6 py-2 rounded-full bg-primary text-primary-foreground hover:opacity-90 transition-all"
                     >
-                      清除所有筛选
+                      {t('noResults.clearFilters')}
                     </button>
                   </motion.div>
                 )}
@@ -125,18 +129,18 @@ const Index: React.FC = () => {
         {/* Newsletter / CTA Section (Optional visual filler) */}
         <section className="border-t bg-black text-white py-16">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl font-bold mb-4">订阅我们的周刊</h2>
+            <h2 className="text-3xl font-bold mb-4">{t('newsletter.title')}</h2>
             <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
-              每周获取最前沿的 AI 工具动态和行业深度分析，走在科技最前沿。
+              {t('newsletter.description')}
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-md mx-auto">
               <input
                 type="email"
-                placeholder="输入您的邮箱地址"
+                placeholder={t('newsletter.placeholder')}
                 className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-brand-blue"
               />
               <button className="w-full sm:w-auto px-8 py-3 bg-brand-blue text-white font-semibold rounded-lg hover:bg-blue-600 transition-colors whitespace-nowrap">
-                立即订阅
+                {t('newsletter.button')}
               </button>
             </div>
           </div>

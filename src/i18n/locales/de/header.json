@@ -1,0 +1,13 @@
+{
+  "navigation": {
+    "home": "Startseite",
+    "collections": "Sammlungen",
+    "about": "Über uns"
+  },
+  "search": {
+    "placeholder": "KI-Tools suchen..."
+  },
+  "submit": {
+    "button": "Tool einreichen"
+  }
+}

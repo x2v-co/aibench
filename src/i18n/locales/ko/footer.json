@@ -1,0 +1,30 @@
+{
+  "tagline": "세계 선도적인 AI 도구 탐색 플랫폼으로, 사용자가 가장 혁신적인 지능형 솔루션을 발견할 수 있도록 돕습니다. AI 발견 여정을 시작하세요.",
+  "sections": {
+    "products": {
+      "title": "제품 및 서비스",
+      "allTools": "모든 도구",
+      "advancedSearch": "고급 검색",
+      "collections": "추천 컬렉션",
+      "submitTool": "도구 제출"
+    },
+    "help": {
+      "title": "도움말 센터",
+      "aboutUs": "회사 소개",
+      "userGuide": "사용자 가이드",
+      "privacyPolicy": "개인정보 처리방침",
+      "termsOfService": "서비스 약관"
+    },
+    "newsletter": {
+      "title": "뉴스레터",
+      "description": "최신 AI 도구 출시 알림 및 산업 업데이트를 받아보세요.",
+      "placeholder": "이메일 주소",
+      "button": "구독"
+    }
+  },
+  "copyright": "© {{year}} AIBench 탐색 플랫폼. 모든 권리 보유.",
+  "credits": {
+    "era": "AI 시대를 위해 설계됨",
+    "powered": "차세대 기술 기반"
+  }
+}

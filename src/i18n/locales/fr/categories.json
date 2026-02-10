@@ -1,0 +1,45 @@
+{
+  "all": "Tous les outils",
+  "categories": {
+    "1": {
+      "name": "Rédaction de texte",
+      "description": "Assistants d'écriture IA, traduction et outils de génération de contenu"
+    },
+    "2": {
+      "name": "Génération d'images",
+      "description": "Art IA, édition d'images et outils de création visuelle"
+    },
+    "3": {
+      "name": "Développement de code",
+      "description": "Complétion de code IA, correction de bugs et outils d'efficacité de développement"
+    },
+    "4": {
+      "name": "Création vidéo",
+      "description": "Génération vidéo IA, édition et outils d'avatar numérique"
+    },
+    "5": {
+      "name": "Audio et parole",
+      "description": "Narration IA, création musicale et outils de traitement audio"
+    },
+    "6": {
+      "name": "Productivité",
+      "description": "Notes IA, génération PPT et outils de gestion d'horaire"
+    },
+    "7": {
+      "name": "Agents IA",
+      "description": "Agents IA, assistants intelligents et outils d'automatisation"
+    },
+    "8": {
+      "name": "Recherche IA",
+      "description": "Moteurs de recherche IA et outils de questions-réponses intelligents"
+    },
+    "9": {
+      "name": "Plateforme de développement",
+      "description": "Plateformes de développement d'applications IA sans code/peu de code"
+    },
+    "10": {
+      "name": "Design IA",
+      "description": "Outils de design IA et plateformes créatives"
+    }
+  }
+}

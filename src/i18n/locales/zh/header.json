@@ -1,0 +1,13 @@
+{
+  "navigation": {
+    "home": "首页",
+    "collections": "专题集合",
+    "about": "关于我们"
+  },
+  "search": {
+    "placeholder": "搜索 AI 工具..."
+  },
+  "submit": {
+    "button": "提交工具"
+  }
+}
