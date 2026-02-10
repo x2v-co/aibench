@@ -1,4 +1,4 @@
-import { useState, useMemo, useCallback, useEffect } from 'react';
+import { useState, useMemo, useCallback, useEffect, useRef } from 'react';
 import { useSearchParams, useLocation, useNavigate } from 'react-router-dom';
 import { AITool } from '@/types/tools';
 import { aiTools as defaultAiTools } from '@/data/tools';
@@ -17,22 +17,30 @@ export const useToolSearch = ({ tools }: UseToolSearchOptions = {}) => {
   const [selectedCategoryId, setSelectedCategoryId] = useState<string | null>(null);
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [sortBy, setSortBy] = useState<SortOption>('trending');
+  const initializedRef = useRef(false);
 
   // Use provided tools or fallback to default
   const aiTools = tools || defaultAiTools;
 
-  // Initialize search query from URL parameter
+  // Initialize search query from URL parameter (only once on mount)
   useEffect(() => {
-    const searchParam = searchParams.get('search') || searchParams.get('q');
-    if (searchParam) {
-      setSearchQuery(decodeURIComponent(searchParam));
+    if (!initializedRef.current) {
+      try {
+        const searchParam = searchParams.get('search') || searchParams.get('q');
+        if (searchParam) {
+          setSearchQuery(decodeURIComponent(searchParam));
+        }
+        // Initialize category from URL parameter
+        const categoryParam = searchParams.get('category');
+        if (categoryParam) {
+          setSelectedCategoryId(categoryParam);
+        }
+      } catch (error) {
+        console.error('Error initializing search params:', error);
+      }
+      initializedRef.current = true;
     }
-    // Initialize category from URL parameter
-    const categoryParam = searchParams.get('category');
-    if (categoryParam) {
-      setSelectedCategoryId(categoryParam);
-    }
-  }, [location.search]);
+  }, []); // Empty deps - run only once
 
   const filteredTools = useMemo(() => {
     let result = [...tools];
@@ -88,7 +96,8 @@ export const useToolSearch = ({ tools }: UseToolSearchOptions = {}) => {
     setSelectedCategoryId(null);
     setSelectedTags([]);
     setSortBy('trending');
-    navigate('/'); // Also navigate to home without params
+    initializedRef.current = false; // Reset initialization flag
+    navigate('/');
   }, [navigate]);
 
   return {
