@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Header } from '@/components/Header';
 import { HeroSection } from '@/components/HeroSection';
 import { FeaturedTools } from '@/components/FeaturedTools';
@@ -11,26 +11,11 @@ import { useTranslatedTools } from '@/hooks/useTranslatedTools';
 import { useSEO } from '@/hooks/useSEO';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import { toast } from '@/components/ui/sonner';
-import { useSearchParams } from 'react-router-dom';
 
 const Index: React.FC = () => {
   useSEO();
   const { t } = useTranslation('index');
   const { aiTools } = useTranslatedTools();
-  const [searchParams, setSearchParams] = useSearchParams();
-
-  // Check for subscription success
-  useEffect(() => {
-    if (searchParams.get('subscribed') === 'true') {
-      toast.success('订阅成功！', {
-        description: '感谢订阅！请查看您的邮箱确认订阅。',
-      });
-      // Remove the subscribed parameter from URL
-      searchParams.delete('subscribed');
-      setSearchParams(searchParams, { replace: true });
-    }
-  }, [searchParams, setSearchParams]);
 
   const {
     searchQuery,
