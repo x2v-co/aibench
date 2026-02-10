@@ -298,5 +298,10 @@
     "name": "飞书妙记",
     "description": "字节跳动飞书推出的AI会议记录和转写工具。",
     "longDescription": "飞书妙记是字节跳动飞书推出的AI会议记录和转写工具，支持实时语音转文字、智能会议纪要生成、多语言翻译等功能。与飞书深度集成，支持会议录制、内容搜索和团队协作。"
+  },
+  "t61": {
+    "name": "Skywork",
+    "description": "Skywork，AI工作空间的开创者。",
+    "longDescription": "General Agent是Skywork的任务中心，用于端到端工作执行。它不要求用户决定使用Slides、Docs还是Sheets，而是专注于理解你想要实现的目标。基于你的目标，General Agent自动将请求分解为结构化的子任务，将每个子任务分配给最合适的专家agent，并在单个项目内并行执行。多个最终输出在一个地方交付，无需任何手动工具切换。你只需描述目标，General Agent负责规划、协调和执行。"
   }
 }

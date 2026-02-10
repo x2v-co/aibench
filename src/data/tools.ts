@@ -967,5 +967,20 @@ export const aiTools: AITool[] = [
     visitCount: 340000,
     isFeatured: false,
     createdAt: '2024-03-01'
+  },
+  {
+    id: 't61',
+    name: 'Skywork',
+    description: 'Skywork，AI工作空间的开创者。',
+    longDescription: 'General Agent是Skywork的任务中心，用于端到端工作执行。它不要求用户决定使用Slides、Docs还是Sheets，而是专注于理解你想要实现的目标。基于你的目标，General Agent自动将请求分解为结构化的子任务，将每个子任务分配给最合适的专家agent，并在单个项目内并行执行。多个最终输出在一个地方交付，无需任何手动工具切换。你只需描述目标，General Agent负责规划、协调和执行。',
+    iconUrl: 'https://skywork.ai/help/images/logo_light.svg',
+    websiteUrl: 'https://skywork.ai/',
+    categoryId: '7',
+    tags: ['Agent', 'Workspace', '自动化', '协作'],
+    pricing: '免费增值',
+    rating: 4.5,
+    visitCount: 1000,
+    isFeatured: false,
+    createdAt: '2026-02-10'
   }
 ];

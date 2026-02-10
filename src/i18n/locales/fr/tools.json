@@ -298,5 +298,10 @@
     "name": "Feishu Miaoji",
     "description": "AI meeting record and transcription tool by ByteDance Feishu.",
     "longDescription": "Feishu Miaoji is ByteDance Feishu's AI meeting record and transcription tool, supporting real-time speech-to-text, intelligent meeting minutes generation, multi-language translation, and other functions. Deeply integrated with Feishu, supports meeting recording, content search, and team collaboration."
+  },
+  "t61": {
+    "name": "Skywork",
+    "description": "Skywork, l'initiateur de l'espace de travail IA.",
+    "longDescription": "General Agent est le centre de tâches de Skywork pour l'exécution de travail de bout en bout. Au lieu de demander aux utilisateurs de décider s'ils doivent utiliser Slides, Docs ou Sheets, il se concentre sur la compréhension de ce que vous voulez accomplir. En fonction de votre objectif, General Agent divise automatiquement la demande en sous-tâches structurées, attribue chaque sous-tâche à l'agent expert le plus approprié et les exécute en parallèle au sein d'un seul projet. Plusieurs résultats finalisés sont livrés en un seul endroit sans changement manuel d'outil. Vous n'avez qu'à décrire l'objectif, et General Agent s'occupe de la planification, de la coordination et de l'exécution."
   }
 }
