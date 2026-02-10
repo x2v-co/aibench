@@ -26,12 +26,15 @@ export const useToolSearch = ({ tools }: UseToolSearchOptions = {}) => {
   useEffect(() => {
     if (!initializedRef.current) {
       try {
-        const searchParam = searchParams.get('search') || searchParams.get('q');
+        // Use URLSearchParams to parse window.location.search
+        const urlSearchParams = new URLSearchParams(window.location.hash.split('?')[1] || window.location.search.substring(1));
+
+        const searchParam = urlSearchParams.get('search') || urlSearchParams.get('q');
         if (searchParam) {
           setSearchQuery(decodeURIComponent(searchParam));
         }
         // Initialize category from URL parameter
-        const categoryParam = searchParams.get('category');
+        const categoryParam = urlSearchParams.get('category');
         if (categoryParam) {
           setSelectedCategoryId(categoryParam);
         }
