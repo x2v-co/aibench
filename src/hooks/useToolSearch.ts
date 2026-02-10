@@ -1,6 +1,7 @@
 import { useState, useMemo, useCallback } from 'react';
+import { useSearchParams, useLocation } from 'react-router-dom';
 import { AITool } from '@/types/tools';
-import { aiTools } from '@/data/tools';
+import { aiTools as defaultAiTools } from '@/data/tools';
 
 export type SortOption = 'trending' | 'newest' | 'rating';
 
@@ -8,11 +9,29 @@ interface UseToolSearchOptions {
   tools?: AITool[];
 }
 
-export const useToolSearch = ({ tools = aiTools }: UseToolSearchOptions = {}) => {
+export const useToolSearch = ({ tools }: UseToolSearchOptions = {}) => {
+  const searchParams = useSearchParams();
+  const location = useLocation();
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategoryId, setSelectedCategoryId] = useState<string | null>(null);
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [sortBy, setSortBy] = useState<SortOption>('trending');
+
+  // Use provided tools or fallback to default
+  const aiTools = tools || defaultAiTools;
+
+  // Initialize search query from URL parameter on mount
+  useMemo(() => {
+    const searchParam = searchParams.get('search') || searchParams.get('q');
+    if (searchParam) {
+      setSearchQuery(decodeURIComponent(searchParam));
+    }
+    // Initialize category from URL parameter
+    const categoryParam = searchParams.get('category');
+    if (categoryParam) {
+      setSelectedCategoryId(categoryParam);
+    }
+  }, [location.search, searchParams]);
 
   const filteredTools = useMemo(() => {
     let result = [...tools];
@@ -68,7 +87,7 @@ export const useToolSearch = ({ tools = aiTools }: UseToolSearchOptions = {}) =>
     setSelectedCategoryId(null);
     setSelectedTags([]);
     setSortBy('trending');
-  }, []);
+  }, [searchParams, setSearchQuery, setSelectedCategoryId, setSelectedTags, setSortBy]);
 
   return {
     searchQuery,

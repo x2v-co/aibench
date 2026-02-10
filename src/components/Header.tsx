@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { Search, PlusCircle, Menu } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { Input } from '@/components/ui/input';
@@ -10,6 +10,8 @@ import { motion } from 'framer-motion';
 
 export const Header = () => {
   const { t } = useTranslation('header');
+  const navigate = useNavigate();
+  const [searchQuery, setSearchQuery] = useState('');
 
   return (
     <header className="sticky top-0 z-50 w-full glass-panel border-b">
@@ -63,6 +65,14 @@ export const Header = () => {
           <div className="relative hidden lg:block w-full max-w-xs">
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
             <Input
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' && searchQuery.trim()) {
+                  navigate(`${ROUTE_PATHS.HOME}?search=${encodeURIComponent(searchQuery.trim())}`);
+                  setSearchQuery('');
+                }
+              }}
               placeholder={t('search.placeholder')}
               className="pl-10 h-9 bg-secondary/50 border-none focus-visible:ring-brand-blue"
             />
