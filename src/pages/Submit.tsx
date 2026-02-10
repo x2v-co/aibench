@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Button } from '@/components/ui/button';
@@ -8,23 +8,60 @@ import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { useSEO } from '@/hooks/useSEO';
 import { motion } from 'framer-motion';
-import { Send, ArrowLeft } from 'lucide-react';
+import { Send, ArrowLeft, Loader2 } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { toast } from '@/components/ui/sonner';
 
 const Submit: React.FC = () => {
   const navigate = useNavigate();
   const { t } = useTranslation('common');
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   useSEO({
     title: 'Submit Tool - AIBench',
     description: 'Submit your AI tool to be featured on AIBench',
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // TODO: Implement form submission
-    alert('Thank you! Your submission will be reviewed.');
+    setIsSubmitting(true);
+
+    const formData = new FormData(e.currentTarget);
+
+    // Add Web3Forms access key
+    formData.append('access_key', 'YOUR_WEB3FORMS_ACCESS_KEY');
+
+    // Add subject for better email organization
+    formData.append('subject', `New Tool Submission: ${formData.get('tool-name')}`);
+
+    // Add custom redirect (optional)
+    formData.append('redirect', 'https://aibench.top/#/');
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        toast.success('Submission Successful!', {
+          description: 'Thank you! Your tool submission will be reviewed soon.',
+        });
+        e.currentTarget.reset();
+        setTimeout(() => navigate('/'), 2000);
+      } else {
+        throw new Error(data.message || 'Submission failed');
+      }
+    } catch (error) {
+      toast.error('Submission Failed', {
+        description: error instanceof Error ? error.message : 'Please try again later.',
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -58,39 +95,44 @@ const Submit: React.FC = () => {
           <Card>
             <CardContent className="p-6">
               <form onSubmit={handleSubmit} className="space-y-6">
+                {/* Honeypot field for spam protection */}
+                <input type="checkbox" name="botcheck" className="hidden" style={{ display: 'none' }} />
+
                 <div className="space-y-2">
                   <Label htmlFor="tool-name">Tool Name *</Label>
-                  <Input id="tool-name" placeholder="e.g., ChatGPT" required />
+                  <Input id="tool-name" name="tool-name" placeholder="e.g., ChatGPT" required disabled={isSubmitting} />
                 </div>
 
                 <div className="space-y-2">
                   <Label htmlFor="tool-url">Website URL *</Label>
-                  <Input id="tool-url" type="url" placeholder="https://example.com" required />
+                  <Input id="tool-url" name="tool-url" type="url" placeholder="https://example.com" required disabled={isSubmitting} />
                 </div>
 
                 <div className="space-y-2">
                   <Label htmlFor="tool-icon">Icon URL *</Label>
-                  <Input id="tool-icon" type="url" placeholder="https://example.com/icon.png" required />
+                  <Input id="tool-icon" name="tool-icon" type="url" placeholder="https://example.com/icon.png" required disabled={isSubmitting} />
                 </div>
 
                 <div className="space-y-2">
                   <Label htmlFor="tool-category">Category *</Label>
                   <select
                     id="tool-category"
+                    name="tool-category"
                     className="w-full px-3 py-2 border rounded-md bg-background"
                     required
+                    disabled={isSubmitting}
                   >
                     <option value="">Select a category</option>
-                    <option value="1">Text Writing</option>
-                    <option value="2">Image Generation</option>
-                    <option value="3">Coding Development</option>
-                    <option value="4">Video Creation</option>
-                    <option value="5">Audio & Speech</option>
-                    <option value="6">Productivity</option>
-                    <option value="7">AI Agents</option>
-                    <option value="8">AI Search</option>
-                    <option value="9">Development Platform</option>
-                    <option value="10">AI Design</option>
+                    <option value="Text Writing">Text Writing</option>
+                    <option value="Image Generation">Image Generation</option>
+                    <option value="Coding Development">Coding Development</option>
+                    <option value="Video Creation">Video Creation</option>
+                    <option value="Audio & Speech">Audio & Speech</option>
+                    <option value="Productivity">Productivity</option>
+                    <option value="AI Agents">AI Agents</option>
+                    <option value="AI Search">AI Search</option>
+                    <option value="Development Platform">Development Platform</option>
+                    <option value="AI Design">AI Design</option>
                   </select>
                 </div>
 
@@ -98,9 +140,11 @@ const Submit: React.FC = () => {
                   <Label htmlFor="tool-description">Short Description *</Label>
                   <Input
                     id="tool-description"
+                    name="tool-description"
                     placeholder="A brief description of your tool (max 150 characters)"
                     maxLength={150}
                     required
+                    disabled={isSubmitting}
                   />
                 </div>
 
@@ -108,8 +152,10 @@ const Submit: React.FC = () => {
                   <Label htmlFor="tool-long-description">Detailed Description</Label>
                   <Textarea
                     id="tool-long-description"
+                    name="tool-long-description"
                     placeholder="Tell us more about your tool, its features, and what makes it unique..."
                     rows={5}
+                    disabled={isSubmitting}
                   />
                 </div>
 
@@ -117,7 +163,9 @@ const Submit: React.FC = () => {
                   <Label htmlFor="tool-tags">Tags (comma separated)</Label>
                   <Input
                     id="tool-tags"
+                    name="tool-tags"
                     placeholder="e.g., writing, AI, productivity"
+                    disabled={isSubmitting}
                   />
                 </div>
 
@@ -125,8 +173,10 @@ const Submit: React.FC = () => {
                   <Label htmlFor="tool-pricing">Pricing Model *</Label>
                   <select
                     id="tool-pricing"
+                    name="tool-pricing"
                     className="w-full px-3 py-2 border rounded-md bg-background"
                     required
+                    disabled={isSubmitting}
                   >
                     <option value="Free">Free</option>
                     <option value="Paid">Paid</option>
@@ -138,16 +188,27 @@ const Submit: React.FC = () => {
                   <Label htmlFor="contact-email">Your Email *</Label>
                   <Input
                     id="contact-email"
+                    name="contact-email"
                     type="email"
                     placeholder="For verification purposes"
                     required
+                    disabled={isSubmitting}
                   />
                 </div>
 
                 <div className="pt-4">
-                  <Button type="submit" size="lg" className="w-full md:w-auto gap-2">
-                    <Send className="h-4 w-4" />
-                    Submit for Review
+                  <Button type="submit" size="lg" className="w-full md:w-auto gap-2" disabled={isSubmitting}>
+                    {isSubmitting ? (
+                      <>
+                        <Loader2 className="h-4 w-4 animate-spin" />
+                        Submitting...
+                      </>
+                    ) : (
+                      <>
+                        <Send className="h-4 w-4" />
+                        Submit for Review
+                      </>
+                    )}
                   </Button>
                 </div>
               </form>
