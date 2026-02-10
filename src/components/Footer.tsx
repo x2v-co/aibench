@@ -80,7 +80,7 @@ export const Footer: React.FC = () => {
             {/* EmailOctopus embedded form - uses traditional POST, no CORS issues */}
             <form
               method="post"
-              action="https://emailoctopus.com/lists/de852cd8-0666-11f1-85cc-572c43f6374b/members/embedded/1.3s/add"
+              action="https://emailoctopus.com/lists/de852cd8-0666-11f1-85cc-572c43f6374b/members/embedded/add"
               className="flex gap-2"
               onSubmit={() => {
                 // Optional: Show loading state or success message
