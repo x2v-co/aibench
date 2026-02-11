@@ -303,5 +303,10 @@
     "name": "Skywork",
     "description": "Skywork, l'initiateur de l'espace de travail IA.",
     "longDescription": "General Agent est le centre de tâches de Skywork pour l'exécution de travail de bout en bout. Au lieu de demander aux utilisateurs de décider s'ils doivent utiliser Slides, Docs ou Sheets, il se concentre sur la compréhension de ce que vous voulez accomplir. En fonction de votre objectif, General Agent divise automatiquement la demande en sous-tâches structurées, attribue chaque sous-tâche à l'agent expert le plus approprié et les exécute en parallèle au sein d'un seul projet. Plusieurs résultats finalisés sont livrés en un seul endroit sans changement manuel d'outil. Vous n'avez qu'à décrire l'objectif, et General Agent s'occupe de la planification, de la coordination et de l'exécution."
+  },
+  "t62": {
+    "name": "TestAI",
+    "description": "Outil IA d'automatisation",
+    "longDescription": "TestAI est un outil d'IA pour l'automatisation."
   }
 }

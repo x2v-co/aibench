@@ -303,5 +303,10 @@
     "name": "Skywork",
     "description": "Skywork、AIワークスペースの創始者。",
     "longDescription": "General AgentはSkyworkのタスクセンターで、エンドツーエンドの作業実行を行います。ユーザーにSlides、Docs、Sheetsのどれを使うかを決めさせるのではなく、あなたが達成したいことを理解することに焦点を当てています。あなたの目標に基づいて、General Agentはリクエストを自動的に構造化されたサブタスクに分解し、各サブタスクを最適なエキスパートエージェントに割り当て、単一のプロジェクト内で並列実行します。複数の最終出力が一箇所に配信され、手動でのツール切り替えは不要です。あなたは目標を説明するだけで、General Agentが計画、調整、実行を担当します。"
+  },
+  "t62": {
+    "name": "TestAI",
+    "description": "自動化テストAIツール",
+    "longDescription": "TestAIは自動化のためのAIツールです。"
   }
 }

@@ -982,5 +982,20 @@ export const aiTools: AITool[] = [
     visitCount: 1000,
     isFeatured: false,
     createdAt: '2026-02-10'
+  },
+  {
+    id: 't62',
+    name: 'TestAI',
+    description: 'A test AI tool for automation',
+    longDescription: 'TestAI is an innovative AI tool that helps users automate their daily tasks through intelligent agents. It supports various automation workflows including email processing, data analysis, and content generation.',
+    iconUrl: 'https://testai.example.com/icon.png',
+    websiteUrl: 'https://testai.example.com',
+    categoryId: '7',
+    tags: ['automation', 'AI', 'productivity', 'agents'],
+    pricing: '免费增值',
+    rating: 4.5,
+    visitCount: 1000,
+    isFeatured: false,
+    createdAt: '2026-02-11'
   }
 ];

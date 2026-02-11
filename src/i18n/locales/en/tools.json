@@ -303,5 +303,10 @@
     "name": "Skywork",
     "description": "Skywork, the Originator of AI Workspace.",
     "longDescription": "General Agent is Skywork's task center for end-to-end work execution. Instead of asking users to decide whether to use Slides, Docs, or Sheets, it focuses on understanding what you want to achieve. Based on your goal, General Agent automatically breaks the request into structured sub-tasks, assigns each sub-task to the most suitable expert agent, and executes them in parallel within a single project. Multiple finalized outputs are delivered in one place without any manual tool switching. You only need to describe the goal, and General Agent takes care of the planning, coordination, and execution."
+  },
+  "t62": {
+    "name": "TestAI",
+    "description": "A test AI tool for automation",
+    "longDescription": "TestAI is an innovative AI tool that helps users automate their daily tasks through intelligent agents. It supports various automation workflows including email processing, data analysis, and content generation."
   }
 }

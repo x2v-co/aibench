@@ -303,5 +303,10 @@
     "name": "Skywork",
     "description": "Skywork, der Ursprung des KI-Arbeitsbereichs.",
     "longDescription": "General Agent ist Skyworks Aufgabenzentrum für die End-to-End-Arbeitsausführung. Anstatt Benutzer zu fragen, ob sie Slides, Docs oder Sheets verwenden möchten, konzentriert es sich darauf zu verstehen, was Sie erreichen möchten. Basierend auf Ihrem Ziel zerlegt General Agent die Anfrage automatisch in strukturierte Unteraufgaben, weist jede Unteraufgabe dem am besten geeigneten Experten-Agenten zu und führt sie parallel innerhalb eines einzigen Projekts aus. Mehrere fertiggestellte Outputs werden an einem Ort bereitgestellt, ohne manuelles Tool-Wechseln. Sie müssen nur das Ziel beschreiben, und General Agent kümmert sich um die Planung, Koordination und Ausführung."
+  },
+  "t62": {
+    "name": "TestAI",
+    "description": "Ein KI-Tool zur Automatisierung",
+    "longDescription": "TestAI ist ein innovatives KI-Tool für Automatisierung."
   }
 }
