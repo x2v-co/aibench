@@ -11,8 +11,8 @@
   },
   "t3": {
     "name": "Claude",
-    "description": "High-intelligence, safe, and honest AI assistant developed by Anthropic.",
-    "longDescription": "Claude is Anthropic's AI assistant designed to be helpful, harmless, and honest. It excels at analysis, writing, and complex reasoning tasks."
+    "description": "Claude Opus 4.6 от Anthropic, интеллектуальный ИИ-ассистент, лидирующий в отрасли с окном контекста 1M токенов.",
+    "longDescription": "Claude — это ИИ-ассистент от Anthropic, последняя версия Opus 4.6 лидирует в агентском программировании, использовании компьютера, инструментов, поиске и финансах. Поддерживает окно контекста 1M токенов (бета) с более высокой производительностью и меньшим дрейфом информации в задачах с длинным контекстом. Обладает адаптивным мышлением с четырьмя уровнями усилий: низкий, средний, высокий и максимальный. Поддерживает вывод 128k токенов и сжатие контекста для более длительных задач. Получил высшую оценку в оценке агентского программирования Terminal-Bench 2.0 и лидирует среди всех frontier-моделей в тесте комплексного многопредметного мышления Humanity's Last Exam."
   },
   "t4": {
     "name": "GitHub Copilot",

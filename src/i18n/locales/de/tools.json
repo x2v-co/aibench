@@ -11,8 +11,8 @@
   },
   "t3": {
     "name": "Claude",
-    "description": "Anthropicが開発した高知能、安全で正直なAIアシスタント。",
-    "longDescription": "Claudeは、有用で無害、誠実であるように設計されたAnthropicのAIアシスタントです。分析、ライティング、複雑な推論タスクに優れています。"
+    "description": "Anthropic's Claude Opus 4.6, branchenführender intelligenter KI-Assistent mit 1M Token Kontextfenster.",
+    "longDescription": "Claude ist Anthropic's KI-Assistent, die neueste Opus 4.6 Version führt in Agent-Coding, Computer-Nutzung, Tool-Einsatz, Suche und Finanzen. Unterstützt 1M Token Kontextfenster (Beta) mit stärkerer Leistung und weniger Informationsdrift bei Langkontext-Aufgaben. Verfügt über adaptives Denken mit vier Anstrengungsstufen: niedrig, mittel, hoch und maximal. Unterstützt 128k Token Ausgabe und Kontextkomprimierung für längere Aufgaben. Erreichte die höchste Punktzahl im Terminal-Bench 2.0 Agent-Coding-Evaluation und führt alle Front-Modelle im Humanity's Last Exam komplexen multidisziplinären Reasoning-Test."
   },
   "t4": {
     "name": "GitHub Copilot",

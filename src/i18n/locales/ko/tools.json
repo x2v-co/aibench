@@ -11,8 +11,8 @@
   },
   "t3": {
     "name": "Claude",
-    "description": "High-intelligence, safe, and honest AI assistant developed by Anthropic.",
-    "longDescription": "Claude is Anthropic's AI assistant designed to be helpful, harmless, and honest. It excels at analysis, writing, and complex reasoning tasks."
+    "description": "Anthropic의 Claude Opus 4.6, 100만 토큰 컨텍스트 창을 갖춘 업계를 선도하는 지능형 AI 어시스턴트.",
+    "longDescription": "Claude는 Anthropic의 AI 어시스턴트로, 최신 Opus 4.6 버전은 에이전트 코딩, 컴퓨터 사용, 도구 사용, 검색 및 금융 분야에서 선도적입니다. 100만 토큰 컨텍스트 창(베타)을 지원하여 긴 컨텍스트 작업에서 더 강력한 성능과 더 적은 정보 드리프트를 제공합니다. 낮음, 중간, 높음, 최대의 4가지 노력 수준을 제공하는 적응형 사고 기능이 있습니다. 더 긴 작업을 위한 128k 토큰 출력 및 컨텍스트 압축을 지원합니다. Terminal-Bench 2.0 에이전트 코딩 평가에서 최고 점수를 달성했으며 Humanity's Last Exam 복잡한 다학제 추론 테스트에서 모든 최신 모델보다 앞서고 있습니다."
   },
   "t4": {
     "name": "GitHub Copilot",
